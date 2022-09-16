@@ -11,20 +11,6 @@
     margin-top:-4%;
 }
 
-.gender-label{
-    margin-left: 9%;
-    font-family: 'Poppins', sans-serif;
-    color: #252525;
-    text-transform: uppercase;
-    font-size: 20px;
-}
-.gender-options{
-    margin-left:30%;
-    margin-top: -5%;
-    font-family: 'Poppins', sans-serif;
-    color: #252525;
-    text-transform: uppercase;
-}
 .height{
     width:55%;
     margin-left: 5%;
@@ -38,27 +24,18 @@
     margin-left: 5%;
     width: 85%;
 }
-.calculate-clear{
-    margin-left: 35%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-.calculate-button{
-    margin-right: 1%;
-}
+
 .bmiDiet{
-    padding-top: 50px;
+    padding: 50px;
+    align-items: center;
     background-color: rgb(209, 69, 50);
-    width: 100vw;
-    margin-left: -12%;
+    border-radius: 20px;
 }
 .calorie-calculator{
     margin-right: 16%;
     margin-left: 6%;
 }
-.genderRow{
-    margin-left:18%;
-}
+
 .fullName{
     color: white;
     font-size: 118%;
@@ -78,17 +55,14 @@
     height: 390px;
 }
 .list-group-item{
-    background: rgb(230, 230, 230);
+    background: none;
 }
 .favoriteCard{
     margin-top: 90px;
     margin-bottom: 50px;
-    margin-left: 310px;
     background-color: rgb(230, 230, 230);
 }
-.favoriteColumn{
-    background-color: rgb(230, 230, 230);
-}
+
 .profilePicture{
     width: 18rem;
     height: 90%;
@@ -130,16 +104,8 @@
     margin-top: 45px;
     width:80%;
     margin-left: 10%;
-    
-    
 }
-.dashboard{
-    background-color:#004C52;
-}
-.dashboard-container{
-    background-color:#004C52;
-    width:100vw;
-}
+
 .favoriteMeal{
     margin-top: -1rem;
     margin-bottom: 1rem;
