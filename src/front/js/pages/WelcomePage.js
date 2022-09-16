@@ -18,7 +18,7 @@ export const WelcomePage = () => {
 							</span>
 						</Link>
 
-						<Link to="/">
+						<Link to="/SignUP">
 							<span className="btn btn-orange m-2" href="#" role="button">
 							SIGN UP
 							</span>

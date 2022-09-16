@@ -8,6 +8,9 @@ import { ResetPassword } from "../js/pages/ResetPassword";
 import { Login } from "../js/pages/LoginPage";
 import { SearchPage } from "../js/pages/SearchPage";
 import { WelcomePage } from "../js/pages/WelcomePage";
+import { SignUpPage } from "../js/pages/SignUpPage";
+import { SignUpQuestionsPage } from "../js/pages/SignUpQuestionsPage";
+import { SignUpQuestionsGoalsPage } from "./pages/SignupQuestionsGoalsPage";
 import injectContext from "../js/store/appContext";
 
 import { NavBar } from "../js/component/NavBar";
@@ -30,6 +33,9 @@ const Layout = () => {
           <Route element={<Profile />} path="/dashboard" />
           <Route element={<Login />} path="/LoginPage" />
           <Route element={<ResetPassword />} path="/ResetPassword" />
+          <Route element={<SignUpPage />} path="/SignUP" />
+          <Route element={<SignUpQuestionsPage />} path="/SignUpQuestions" />
+          <Route element={<SignUpQuestionsGoalsPage />} path="/SignUpQuestionsGoals" />
           <Route element={<LandingPage />} path="/landingPage" />
           <Route element={<SearchPage />} path="/SearchPage" />
           <Route element={<WelcomePage />} path="/WelcomePage" />
