@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Context } from "../store/appContext";
+import { Context } from "/src/front/js/store/appContext.js";
 import { Link } from "react-router-dom";
 
 export default function RecipeCard() {

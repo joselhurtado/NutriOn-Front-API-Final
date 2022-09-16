@@ -13,7 +13,7 @@ import injectContext from "../js/store/appContext";
 import { NavBar } from "../js/component/NavBar";
 import { Footer } from "../js/component/footer";
 import RecipeDetails from "../js/component/RecipeDetails";
-import Profile from "../js/component/Profile";
+import Profile from "../js/pages/Profile";
 
 const Layout = () => {
   //the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -27,11 +27,11 @@ const Layout = () => {
         <NavBar />
         <Routes>
           <Route index element={<Home />} path="/" />
-          <Route element={<Profile />} path="/dasboard" />
+          <Route element={<Profile />} path="/dashboard" />
           <Route element={<Login />} path="/LoginPage" />
           <Route element={<ResetPassword />} path="/ResetPassword" />
           <Route element={<LandingPage />} path="/landingPage" />
-          <Route element={<SearchPage />} path="/searchPage" />
+          <Route element={<SearchPage />} path="/SearchPage" />
           <Route element={<WelcomePage />} path="/WelcomePage" />
           <Route element={<RecipeDetails />} path="/recipe/:theid" />
           <Route element={<h1>404 Not Found!</h1>} />

@@ -16,8 +16,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					`https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=6`
 				);
 				const payload = await response.json();
-				setStore({recipeData:payload.recipes})
-				console.log(payload, "Payload Popular Recipes")
+				setStore({recipePopular:payload.recipes})
+				console.log(payload, "Payload Popular Recipes Flux")
 			},
 
 			// getVeganRecipes: async () => { 			//New Function to Call Vegan Recipes

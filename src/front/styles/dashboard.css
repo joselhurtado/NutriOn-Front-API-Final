@@ -1,0 +1,146 @@
+.footer-parent-box{
+    background-color: #05727A;
+}
+.ageInput{
+    margin-bottom: 5%;
+    width: 30%;
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    text-transform: uppercase;
+    margin-left:35%;
+    margin-top:-4%;
+}
+
+.gender-label{
+    margin-left: 9%;
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.gender-options{
+    margin-left:30%;
+    margin-top: -5%;
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    text-transform: uppercase;
+}
+.height{
+    width:55%;
+    margin-left: 5%;
+}
+.weight{
+    margin-bottom: 5%;
+    width: 30%;
+    margin-left: 5%;
+}
+.activity-level{
+    margin-left: 5%;
+    width: 85%;
+}
+.calculate-clear{
+    margin-left: 35%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.calculate-button{
+    margin-right: 1%;
+}
+.bmiDiet{
+    padding-top: 50px;
+    background-color: rgb(209, 69, 50);
+    width: 100vw;
+    margin-left: -12%;
+}
+.calorie-calculator{
+    margin-right: 16%;
+    margin-left: 6%;
+}
+.genderRow{
+    margin-left:18%;
+}
+.fullName{
+    color: white;
+    font-size: 118%;
+    font-family: 'Poppins', sans-serif;
+}
+.usernameInput{
+    color: white;
+    font-size: 118%;
+    font-family: 'Poppins', sans-serif;
+}
+.emailAddressInput{
+    color: white;
+    font-size: 118%;
+    font-family: 'Poppins', sans-serif;
+}
+.innerCircle{
+    height: 390px;
+}
+.list-group-item{
+    background: rgb(230, 230, 230);
+}
+.favoriteCard{
+    margin-top: 90px;
+    margin-bottom: 50px;
+    margin-left: 310px;
+    background-color: rgb(230, 230, 230);
+}
+.favoriteColumn{
+    background-color: rgb(230, 230, 230);
+}
+.profilePicture{
+    width: 18rem;
+    height: 90%;
+    background-color: #004C52;
+    margin-left: 22%;
+}
+.feetInput{
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    width:60%;
+    text-transform: uppercase;
+    margin-left: 40%;
+    margin-top:-8%;
+    margin-bottom:8%;
+}
+.inchesInput{
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    width:60%;
+    text-transform: uppercase;
+    margin-top:-8%;
+}
+
+.calorieTitle{
+    padding-top:-20px;
+}
+.card-text-diet{
+    width: 225px;
+    margin: auto;
+}
+.personalDietCircle{
+    border-radius: 50%;
+    width: 395px;
+    margin: auto;
+    background: rgb(230, 230, 230);
+    
+}
+.dietCircleTitle{
+    margin-top: 45px;
+    width:80%;
+    margin-left: 10%;
+    
+    
+}
+.dashboard{
+    background-color:#004C52;
+}
+.dashboard-container{
+    background-color:#004C52;
+    width:100vw;
+}
+.favoriteMeal{
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}

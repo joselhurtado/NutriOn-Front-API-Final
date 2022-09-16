@@ -1,22 +1,18 @@
 import React from "react";
 import "../../styles/home.css";
-import RecipeCardPopular from "/src/front/js/component/RecipeCardPopular";
-import RecipeCardVegan from "/src/front/js/component/RecipeCardVegan";
-import RecipeCardKeto from "/src/front/js/component/RecipeCardKeto";
-import RecipeCardPaleo from "/src/front/js/component/RecipeCardPaleo";
-import RecipeCardVegetarian from "/src/front/js/component/RecipeCardVegetarian";
+import RecipeCardPopular from "/src/front\/js/component/RecipeCardPopular";
 import { ButtonDiets } from "/src/front/js/component/ButtonDiets"
 import { HeroSearch } from "/src/front/js/component/HeroSearch";
 
 export const SearchPage = () => {
 	return (
 		<div className="container">
-			<div>
+			{/* <div>
 				<HeroSearch />
-			</div>
+			</div> 
 			<div>
 				<ButtonDiets />
-			</div>
+			</div>*/}
 			<div>
 				<h1 className="text-left">Popular Recipes</h1>
 				<p className="text-left">Tasty recipes the whole family will love.</p>
@@ -25,7 +21,7 @@ export const SearchPage = () => {
 				</div>
 			</div>
 
-			<div>
+			{/* <div>
 				<h1 className="text-left">Vegan Recipes</h1>
 				<p className="text-left ">Tasty recipes the whole family will love.</p>
 				<div>
@@ -55,7 +51,7 @@ export const SearchPage = () => {
 				<div>
 				<RecipeCardVegetarian />
 				</div>
-			</div>
+			</div> */}
 		</div>
 )
 }

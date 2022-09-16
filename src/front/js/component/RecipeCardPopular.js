@@ -1,16 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Context } from "../store/appContext";
+import { Context } from "/src/front/js/store/appContext.js";
 import { Link } from "react-router-dom";
 
 export default function RecipeCardPopular() {
     const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not used yet)
-    const [recipes, setRecipes] = useState([]); //UseState run the function from recipes (API)
-    console.log(recipes, "Recipes")
+    const [recipes, setPopular] = useState([]); //UseState run the function from recipes (API)
+    console.log(recipes, "Recipes Popular")
     useEffect(() => {
-        setRecipes(store.recipeData)
-    }, [store.recipeData] // In Here we call out again to keep stored the data on re-load the page
+        setPopular(store.recipePopular)
+    }, [store.recipePopular] // In Here we call out again to keep stored the data on re-load the page
     )
-
 
     return (
         <div className="d-flex overflow-auto">{recipes.length > 0 && recipes.map((x,i) => 
