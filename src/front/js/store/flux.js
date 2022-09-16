@@ -1,54 +1,79 @@
+
 const getState = ({ getStore, getActions, setStore }) => {
+
 	return {
 		store: {
-			message: null,
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+				recipeData: [],
+				recipeVegan: [],
+				recipeKeto: [],
+				recipePaleo: [],
+				recipeVegetarian: [],
+				favorites: [],
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			getPopularRecipes: async () => { 			//New Function to Call Popular Recipes
+				const response = await fetch(
+					`https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=6`
+				);
+				const payload = await response.json();
+				setStore({recipeData:payload.recipes})
+				console.log(payload, "Payload Popular Recipes")
 			},
 
-			getMessage: async () => {
-				try{
-					// fetching data from the backend
-					const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
-					const data = await resp.json()
-					setStore({ message: data.message })
-					// don't forget to return something, that is how the async resolves
-					return data;
-				}catch(error){
-					console.log("Error loading message from backend", error)
-				}
+			// getVeganRecipes: async () => { 			//New Function to Call Vegan Recipes
+			// 	const response = await fetch(
+			// 		`https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&number=6`
+			// 	);
+			// 	const payload = await response.json();
+			// 	setStore({recipeVegan:payload.results})
+			// 	console.log(payload, "Payload Vegan Recipes")
+			// },
+
+			// getKetoRecipes: async () => { 			//New Function to Call Keto Recipes
+			// 	const response = await fetch(
+			// 		`https://api.spoonacular.com/recipes/complexSearch?query=keto&apiKey=${process.env.APIfood}&number=6`
+			// 	);
+			// 	const payload = await response.json();
+			// 	setStore({recipeKeto:payload.results})
+			// 	console.log(payload, "Payload Keto Recipes")
+			// },
+
+			// getPaleoRecipes: async () => { 			//New Function to Call Paleo Recipes
+			// 	const response = await fetch(
+			// 		`https://api.spoonacular.com/recipes/complexSearch?query=paleo&apiKey=${process.env.APIfood}&number=6`
+			// 	);
+			// 	const payload = await response.json();
+			// 	setStore({recipePaleo:payload.results})
+			// 	console.log(payload, "Payload Paleo Recipes")
+			// },
+
+			// getVegetarianRecipes: async () => { 			//New Function to Call Vegetarian Recipes
+			// 	const response = await fetch(
+			// 		`https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&apiKey=${process.env.APIfood}&number=6`
+			// 	);
+			// 	const payload = await response.json();
+			// 	setStore({recipeVegetarian:payload.results})
+			// 	console.log(payload, "Payload Vegetarian Recipes")
+			// },
+
+			addFavorites: (item) => {   			//Favorites Function
+				const store = getStore();			//Access to the Store
+				store.favorites.push(item)			//Push Item
+				setStore(store)						//Save the Changes under Store (Update the State)
 			},
-			changeColor: (index, color) => {
-				//get the store
+
+			removeFavorites: index => {   			//Remove Favorites Function
 				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			}
-		}
+				let updatedList = store.favorites.filter(
+					(item, i) => index != i
+				);
+				setStore({favorites:updatedList})	
+			},					
+			
+		}	
 	};
 };
+
+//* ABOVE THIS LINE LIVES THE NEW API ACTIONS CALLING OBJECTS *//
 
 export default getState;

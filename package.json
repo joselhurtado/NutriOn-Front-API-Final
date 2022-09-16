@@ -1,5 +1,5 @@
 {
-	"name": "react-hello-webapp",
+	"name": "NutriOn-webapp",
 	"engines": {
 		"node": "16.x"
 	},
@@ -11,16 +11,16 @@
 		"build": "webpack --config webpack.prod.js"
 	},
 	"author": {
-		"name": "Alejandro Sanchez",
+		"name": "Jose Hurtado, Melissa Castro and Jonathan Rodriguez",
 		"url": "http://alesanchezr.com/"
 	},
 	"contributors": [
 		{
-			"name": "Alejandro Sanchez",
-			"url": "http://alesanchezr.com/"
+			"name": "Jose Hurtado",
+			"url": "http://hurtadojose.com"
 		},
 		{
-			"name": "Ignacio Cordoba",
+			"name": "Melissa Castro",
 			"url": "http://github.com/nachovz"
 		}
 	],
@@ -77,6 +77,6 @@
 		"react": "^16.8.4",
 		"react-dom": "^16.8.4",
 		"react-polyfills": "0.0.1",
-		"react-router-dom": "^6.3.0"
+		"react-router-dom": "^6.4.0"
 	}
 }
