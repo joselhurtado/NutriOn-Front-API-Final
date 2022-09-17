@@ -7,12 +7,12 @@ import { HeroSearch } from "/src/front/js/component/HeroSearch";
 export const SearchPage = () => {
 	return (
 		<div className="container">
-			{/* <div>
+			<div>
 				<HeroSearch />
 			</div> 
 			<div>
 				<ButtonDiets />
-			</div>*/}
+			</div>
 			<div>
 				<h1 className="text-left">Popular Recipes</h1>
 				<p className="text-left">Tasty recipes the whole family will love.</p>

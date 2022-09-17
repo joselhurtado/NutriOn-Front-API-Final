@@ -304,13 +304,11 @@ hr {
 .btn-outline-orange {
     background-color: #D14532 !important;
     color: #fff !important;
-    font-family: 'Poppins', sans-serif;
 }
 
 .btn-outline-orange::after {
     background-color: #D14532 !important;
     color: #Fff !important;
-    font-family: 'Poppins', sans-serif;
 }
 
 /* Welcome Page */
