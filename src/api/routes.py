@@ -16,3 +16,13 @@ def handle_hello():
     }
 
     return jsonify(response_body), 200
+
+@api.route('/signUp', methods=['POST'])
+def new_User():
+    user = User.query.all()
+
+    response_body = {
+        "message": "New User Created"
+    }
+
+    return jsonify(response_body), 200
