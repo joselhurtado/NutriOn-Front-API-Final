@@ -46,7 +46,7 @@ class User(db.Model):
             "female":self.female,
             "vegan_diet":self.vegan_diet,
             "vegeterian_diet":self.vegeterian_diet,
-            "gluten-free-diet":self.gluten_free_diet,
+            "gluten_free_diet":self.gluten_free_diet,
             "keto_diet": self.keto_diet,
             "paleo_diet": self.paleo_diet,
             "pescatarian_diet": self.pescatarian_diet,
