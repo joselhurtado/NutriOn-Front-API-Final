@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 	return {
 		store: {
+				User:[],
 				recipeData: [],
 				recipeVegan: [],
 				recipeKeto: [],
@@ -68,8 +69,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					(item, i) => index != i
 				);
 				setStore({favorites:updatedList})	
-			},					
-			
+			},	
+
+			newUser: async () => { 			//New Function to Call Existing Users
+				const response = await fetch(process.env.DATABASE_URL + "/api/signUp");
+				const payload = await response.json();
+				setStore({User:payload.results})
+				console.log(payload, "New User Created on the Backend")
+			},
+
+			getUser: async () => { 			//New Function to Call New Users
+				const response = await fetch(process.env.DATABASE_URL + "/api/getUser");
+				const payload = await response.json();
+				setStore({User:payload.results})
+				console.log(payload, "Get existing User from Backend")
+			},
+
 		}	
 	};
 };
