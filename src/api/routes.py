@@ -19,10 +19,11 @@ def handle_hello():
 
 @api.route('/signUp', methods=['POST'])
 def new_User():
-    user = User.query.all()
+    new_user = User.query.all()
+    user_serialized = [user.serialized() for user in new_user]
 
     response_body = {
         "message": "New User Created"
     }
 
-    return jsonify(response_body), 200
+    return jsonify(user_serialized), 200
