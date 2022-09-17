@@ -20,41 +20,41 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(payload, "Payload Popular Recipes Flux")
 			},
 
-			// getVeganRecipes: async () => { 			//New Function to Call Vegan Recipes
-			// 	const response = await fetch(
-			// 		`https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&number=6`
-			// 	);
-			// 	const payload = await response.json();
-			// 	setStore({recipeVegan:payload.results})
-			// 	console.log(payload, "Payload Vegan Recipes")
-			// },
+			getVeganRecipes: async () => { 			//New Function to Call Vegan Recipes
+				const response = await fetch(
+					`https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&number=6`
+				);
+				const payload = await response.json();
+				setStore({recipeVegan:payload.results})
+				console.log(payload, "Payload Vegan Recipes")
+			},
 
-			// getKetoRecipes: async () => { 			//New Function to Call Keto Recipes
-			// 	const response = await fetch(
-			// 		`https://api.spoonacular.com/recipes/complexSearch?query=keto&apiKey=${process.env.APIfood}&number=6`
-			// 	);
-			// 	const payload = await response.json();
-			// 	setStore({recipeKeto:payload.results})
-			// 	console.log(payload, "Payload Keto Recipes")
-			// },
+			getKetoRecipes: async () => { 			//New Function to Call Keto Recipes
+				const response = await fetch(
+					`https://api.spoonacular.com/recipes/complexSearch?query=keto&apiKey=${process.env.APIfood}&number=6`
+				);
+				const payload = await response.json();
+				setStore({recipeKeto:payload.results})
+				console.log(payload, "Payload Keto Recipes")
+			},
 
-			// getPaleoRecipes: async () => { 			//New Function to Call Paleo Recipes
-			// 	const response = await fetch(
-			// 		`https://api.spoonacular.com/recipes/complexSearch?query=paleo&apiKey=${process.env.APIfood}&number=6`
-			// 	);
-			// 	const payload = await response.json();
-			// 	setStore({recipePaleo:payload.results})
-			// 	console.log(payload, "Payload Paleo Recipes")
-			// },
+			getPaleoRecipes: async () => { 			//New Function to Call Paleo Recipes
+				const response = await fetch(
+					`https://api.spoonacular.com/recipes/complexSearch?query=paleo&apiKey=${process.env.APIfood}&number=6`
+				);
+				const payload = await response.json();
+				setStore({recipePaleo:payload.results})
+				console.log(payload, "Payload Paleo Recipes")
+			},
 
-			// getVegetarianRecipes: async () => { 			//New Function to Call Vegetarian Recipes
-			// 	const response = await fetch(
-			// 		`https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&apiKey=${process.env.APIfood}&number=6`
-			// 	);
-			// 	const payload = await response.json();
-			// 	setStore({recipeVegetarian:payload.results})
-			// 	console.log(payload, "Payload Vegetarian Recipes")
-			// },
+			getVegetarianRecipes: async () => { 			//New Function to Call Vegetarian Recipes
+				const response = await fetch(
+					`https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&apiKey=${process.env.APIfood}&number=6`
+				);
+				const payload = await response.json();
+				setStore({recipeVegetarian:payload.results})
+				console.log(payload, "Payload Vegetarian Recipes")
+			},
 
 			addFavorites: (item) => {   			//Favorites Function
 				const store = getStore();			//Access to the Store
