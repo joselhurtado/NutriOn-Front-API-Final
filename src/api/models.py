@@ -10,7 +10,7 @@ class User(db.Model):
     password = db.Column(db.String(80), unique=False, nullable=False)
     lose_weight = db.Column(db.Boolean(), unique=False, nullable=False)
     gain_weight = db.Column(db.Boolean(), unique=False, nullable=False)
-    maintai_weight = db.Column(db.Boolean(), unique=False, nullable=False)
+    maintain_weight = db.Column(db.Boolean(), unique=False, nullable=False)
     male = db.Column(db.Boolean(), unique=False, nullable=False)
     female = db.Column(db.Boolean(), unique=False, nullable=False)
     other = db.Column(db.Boolean(), unique=False, nullable=False)
@@ -18,7 +18,7 @@ class User(db.Model):
     vegeterian_diet = db.Column(db.Boolean(), unique=False, nullable=False)
     gluten_free_diet = db.Column(db.Boolean(), unique=False, nullable=False)
     keto_diet = db.Column(db.Boolean(), unique=False, nullable=False)
-    pale_diet = db.Column(db.Boolean(), unique=False, nullable=False)
+    paleo_diet = db.Column(db.Boolean(), unique=False, nullable=False)
     pescatarian_diet = db.Column(db.Boolean(), unique=False, nullable=False)
     norestrictions_diet = db.Column(db.Boolean(), unique=False, nullable=False)
     user_height_feet = db.Column(db.String(3), unique=True, nullable=False)
@@ -36,8 +36,29 @@ class User(db.Model):
     def serialize(self):
         return {
             "id": self.id,
+            "first_name": self.first_name,
+            "last_name": self.last_name,
             "email": self.email,
-            # do not serialize the password, its a security breach
+            "lose_weight":self.lose_weight,
+            "gain_weight":self.gain_weight,
+            "maintain_weight":self.maintain_weight,
+            "male": self.male,
+            "female":self.female,
+            "vegan_diet":self.vegan_diet,
+            "vegeterian_diet":self.vegeterian_diet,
+            "gluten_free_diet":self.gluten_free_diet,
+            "keto_diet": self.keto_diet,
+            "paleo_diet": self.paleo_diet,
+            "pescatarian_diet": self.pescatarian_diet,
+            "norestrictions_diet": self.norestrictions_diet,
+            "user_height_feet":self.user_height_feet,
+            "user_height_inches":self.user_height_inches,
+            "user_weight":self.user_weight,
+            "user_age":self.user_age,
+            "light_activity":self.light_activity,
+            "moderate_activity": self.moderate_activity,
+            "active_activity": self.active_activity,
+            "is_active": self.is_active,
         }
 class Favorite(db.Model):
         __tablename__ = 'favorite'
