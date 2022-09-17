@@ -17,12 +17,6 @@
     background-color: #D14532;
     margin: 10px;
 }
-#questionbutton{
-        width: 275px;
-        height: 50px;
-        background-color: #D14532;
-        
-}
 .question-title{
     color: white;
 }
@@ -79,7 +73,7 @@
 }
 .SignupFormbtn {
     margin-top: 20px;
-    margin-left: 69px;
+    text-align: center;
 }
 #Signupformbtn2{
     margin-top: 20px;
@@ -88,4 +82,156 @@
 #Signupbtn3{
     margin-top: 20px;
     margin-left: 109px;
+}
+#emailsignup{
+    margin-top: 20px;
+}
+.UserinfoPassword{
+    display: flex;
+    margin-top: 15px;
+}
+.SignupForm{
+    margin-top: 15px;
+}
+.weight-title{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.CalcTitle{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.3btnweight{
+    display: flex;
+    
+}
+.btnweight{
+    margin: 10px;
+    width: 130px;
+    height: 40px;
+    background-color: #8080807d;
+    border-radius: 40px;
+    border: none;
+    color: white;
+}
+.btnactivity{
+    margin: 10px;
+    width: 130px;
+    height: 40px;
+    background-color: #8080807d;
+    border-radius: 40px;
+    border: none;
+    color: white;
+}
+.weightgoalbuttons{
+    text-align: center;
+}
+.gender-title{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+}
+#Questionbuttons1{
+    margin-right: 30px;
+}
+.form-check-label{
+    color: white;
+}
+.dietcheckboxes{
+    text-align: center;
+}
+
+.BMItitle{
+    margin-top: 20px;
+}
+.BMIinfo{
+    color: white;
+    font-weight: 700;
+}
+.BMIactivity{
+    color: white;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.feet{
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+}
+.WeightBMI{
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+}
+.inch{
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+}
+.weight{
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+}
+.age{
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+}
+.containerBMI{
+    display: flex;
+}
+.BMInumberbox{
+    height: 80px;
+    background-color: #D14532;
+    padding-top:4px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+.BMInumber{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.Tableh3{
+    margin-top: 20px;
+    color: white;
+    border: 1px solid white;
+    padding: 3px;
+    text-align: center;
+}
+.lefttablep{
+    color: white;
+    border: 1px solid white;
+    padding: 3px;
+}
+.Righttablep{
+    color: white;
+    border: 1px solid white;
+    padding: 3px;
+    padding-right: 165px;
+    }
+.containerBMI{
+    margin-left: 600px
+}
+.tablep{
+    display: flex;
+}
+.ImageRight{
+    margin-left: 30px;
+}
+.CaloriesP{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+.BMIweight{
+    text-align: center;
 }
