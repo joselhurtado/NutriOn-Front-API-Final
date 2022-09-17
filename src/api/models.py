@@ -39,35 +39,11 @@ class User(db.Model):
             "email": self.email,
             # do not serialize the password, its a security breach
         }
-class Planet(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(250), nullable=False)
-    diameter = db.Column(db.String(100), nullable=False)
-    image = db.Column(db.String(100), nullable=False)
-    gravity = db.Column(db.String(100), nullable=False)
-
-    def __repr__(self):
-        return self.name
-
-    def serialize(self):
-        return {
-            "id": self.id,
-            "name": self.name,
-            "diameter": self.diameter,
-            "image": self.image,
-            "gravity": self.gravity,
-            } 
 class Favorite(db.Model):
         __tablename__ = 'favorite'
         id = db.Column(db.Integer, primary_key=True)
         user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
         user = db.relationship('User')
-        starship_id = db.Column(db.Integer, db.ForeignKey('starship.id'))
-        starship = db.relationship('Starship')
-        character_id = db.Column(db.Integer, db.ForeignKey('character.id'))
-        character = db.relationship('Character')
-        planet_id = db.Column(db.Integer, db.ForeignKey('planet.id'))
-        planet = db.relationship('Planet')
 
         def __repr__(self):
             return '<Favorite %r>' % self.id
