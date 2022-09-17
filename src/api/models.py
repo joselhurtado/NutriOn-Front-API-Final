@@ -52,7 +52,7 @@ class User(db.Model):
             "pescatarian_diet": self.pescatarian_diet,
             "norestrictions_diet": self.norestrictions_diet,
             "user_height_feet":self.user_height_feet,
-            "user_height_inches":self.user_height_inches,
+            "user_height_inch":self.user_height_inch,
             "user_weight":self.user_weight,
             "user_age":self.user_age,
             "light_activity":self.light_activity,
@@ -73,7 +73,4 @@ class Favorite(db.Model):
             return {
                 "id": self.id,
                 "user": self.user,
-                "starship_id": self.starship_id,
-                "character_id": self.character_id,
-                "planet_id": self.planet_id
         }
