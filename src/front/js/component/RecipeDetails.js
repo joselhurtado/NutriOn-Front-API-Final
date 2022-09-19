@@ -9,13 +9,13 @@ export default function RecipeCard() {
     const [recipe, setRecipe] = useState({});
     
     useEffect(() => {
-        const data = store.recipeData.find(item => {
+        const data = store.recipePopular.find(item => {
             if(item.id == params.theid){
                 return item;
             }
         })
         setRecipe(data);
-    },[store.recipeData])
+    },[store.recipePopular])
 
     return (
         <div className="container">
@@ -30,14 +30,12 @@ export default function RecipeCard() {
                 <div className="col-md-6">
                 <div className="card-body">
                     <h5 className="card-title">{recipe?.title}</h5>
-                    <p className="card-text">Ready Minutes:<strong>{recipe?.readyInMinutes}</strong></p>
-                    <p className="card-text">Servings: <strong>{recipe?.servings}</strong></p>
-                    <p className="card-text">Recipe Link: <strong>{recipe?.sourceUrl}</strong></p>
-                    <p className="card-text">Product ID: <strong>{recipe?.id}</strong></p>
-                    <p className="card-text">Protein: <strong>{recipe?.protein}</strong></p>
-                    <p className="card-text">Height: <strong>{recipe?.id}</strong></p>
-                    <p className="card-text">Height: <strong>{recipe?.id}</strong></p>
-                    <p className="card-text">Height: <strong>{recipe?.id}</strong></p>
+                    <p className="card-text"><strong>instructions: </strong>{recipe?.instructions} </p>
+                    <p className="card-text"><strong>Recipe Link: </strong>{recipe?.sourceUrl}</p>
+                    <p className="card-text"><strong>weightWatcherSmartPoints: </strong>{recipe?.weightWatcherSmartPoints}</p>
+                    <p className="card-text"><strong>dishTypes: </strong>{recipe?.dishTypes} </p>
+                    <p className="card-text"><strong>Cuisines: </strong>{recipe?.cuisines} </p>
+
                     <br />
                 </div>
                 </div>

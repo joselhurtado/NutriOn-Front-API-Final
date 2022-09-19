@@ -10,7 +10,7 @@ export const BMISection = () => {
                     <p className="text-light">Maintaining a weight in the healthy BMI range is one way to support overall health as you age.</p>
                     
                     <div className='d-flex'>
-                    <table class="table text-light ">
+                    <table className="table text-light ">
                         <thead>
                             <tr>
                             <th scope="col">BMI HEALTHY WEIGHT REFERENCE:</th>
@@ -51,13 +51,13 @@ export const BMISection = () => {
                                     </div>
                             </div> 
 
-                            <div class="row m-2">
+                            <div className="row m-2">
                                 <h1 className="card-title m-2">YOUR WEIGHT</h1>
                                     <div className="col">
-                                        <div type="text" class="form-control" placeholder="Weight">Weight</div>
+                                        <div type="text" className="form-control" placeholder="Weight">Weight</div>
                                     </div>
                             </div> 
-                                <h5 href="#" class="btn btn-orange m-4 ">Compute BMI <span className="fa fa-arrow-right"></span></h5>
+                                <h5 href="#" className="btn btn-orange m-4 ">Compute BMI <span className="fa fa-arrow-right"></span></h5>
                                 <h1>Your Height</h1>
                                 <h1>22.5</h1>
                             </div>

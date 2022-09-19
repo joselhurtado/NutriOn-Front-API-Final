@@ -202,6 +202,12 @@ h1 {
     font-weight: 700;
 }
 
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #252525;
+}
+
 h5 {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
@@ -240,6 +246,7 @@ hr {
 .card-img-top {
     width: 350;
     height: auto;
+    margin-top: 10px;
     background-size: cover;
 }
 
@@ -279,10 +286,9 @@ hr {
 
 .card-text {
     font-family: 'Poppins', sans-serif;
-    line-height: normal;
-    overflow: hidden;
+    line-height: 1rem;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: wrap;
     color: #252525;
 }
 
@@ -307,13 +313,16 @@ hr {
 }
 
 .btn-outline-orange {
-    background-color: #D14532 !important;
-    color: #fff !important;
+    background-color: #fff !important;
+    color: #D14532 !important;
+    border: 2px solid #D14532;
+
 }
 
-.btn-outline-orange::after {
+.btn-outline-orange:hover {
     background-color: #D14532 !important;
-    color: #Fff !important;
+    color: #Ffff !important;
+    border: 2px solid #D14532;
 }
 
 /* Welcome Page */

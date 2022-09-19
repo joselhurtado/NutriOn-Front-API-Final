@@ -16,10 +16,12 @@ export default function RecipeCardPopular() {
             <div key={i} className="col-sm card m-2 cardShape" style={{minWidth: "18rem"}}>
                 <img src={`https://spoonacular.com/recipeImages/${x.id}-556x370.${x.imageType}`} className="card-img-top shapeImageTop" alt="recipe Image" />
                     <div className="card-body text-light">
-                        <h4 className="card-title">{x.title}</h4>
-                        <div className="d-flex justify-content-between">
+                        <h4 className="card-title mb-4"><strong>{x.title}</strong></h4>
+                        <p className="card-text"><strong>Ready Minutes: </strong>{x.readyInMinutes}</p>
+                        <p className="card-text"><strong>Servings: </strong>{x.servings}</p>
+                        <div className="d-flex mt-4 justify-content-between">
                         <Link to={`/recipe/${x.id}`} className="btn btn-orange">
-                        Read More
+                        Instructions
                         </Link>
                         <a onClick={() => actions.addFavorites(x)} className="btn btn-outline-orange fa fa-heart" />
                         </div>
