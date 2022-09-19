@@ -12,8 +12,8 @@ export default function RecipeCardPopular() {
     )
 
     return (
-        <div className="d-flex overflow-auto">{recipes.length > 0 && recipes.map((x,i) => 
-            <div key={i} className="card m-2 cardShape" style={{minWidth: "18rem"}}>
+        <div className="row">{recipes.length > 0 && recipes.map((x,i) => 
+            <div key={i} className="col-sm card m-2 cardShape" style={{minWidth: "18rem"}}>
                 <img src={`https://spoonacular.com/recipeImages/${x.id}-556x370.${x.imageType}`} className="card-img-top shapeImageTop" alt="recipe Image" />
                     <div className="card-body text-light">
                         <h4 className="card-title">{x.title}</h4>

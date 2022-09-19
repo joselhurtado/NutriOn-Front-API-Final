@@ -13,9 +13,20 @@ body {
 }
 
 .NavLogo {
-    width: auto;
-    height: 50px;
+    max-width: 200px;
+    height: auto;
     margin-left: 20px;
+}
+
+.dropdown-item {
+    color: #000 !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-item:hover {
+    background-color: #D14532 !important;
+    color: #fff !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Hero Section */
@@ -85,7 +96,7 @@ body {
 }
 
 .statsGrid {
-    padding: 50px;
+    padding: 40px;
     text-align: center;
 }
 
@@ -292,12 +303,6 @@ hr {
 
 .footerLegal>a {
     color: #fff;
-    font-family: 'Poppins', sans-serif;
-}
-
-.dropdown-item:hover {
-    background-color: #D14532 !important;
-    color: #fff !important;
     font-family: 'Poppins', sans-serif;
 }
 

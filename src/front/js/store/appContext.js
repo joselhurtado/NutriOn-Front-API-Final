@@ -30,10 +30,10 @@ const injectContext = PassedComponent => {
 
 	useEffect(() => {
 		state.actions.getPopularRecipes();
-		state.actions.getVeganRecipes();
-		state.actions.getKetoRecipes();
-		state.actions.getPaleoRecipes();
-		state.actions.getVegetarianRecipes();
+		// state.actions.getVeganRecipes();
+		// state.actions.getKetoRecipes();
+		// state.actions.getPaleoRecipes();
+		// state.actions.getVegetarianRecipes();
 		state.actions.newUser();
 		state.actions.getUser();
 	}, []);
