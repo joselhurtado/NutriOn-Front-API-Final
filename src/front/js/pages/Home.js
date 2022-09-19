@@ -8,16 +8,16 @@ import { BMISection } from "/src/front/js/component/BMISection";
 export const Home = () => {
 	return (
 		<div>
-			<section>
+			<section className="container">
 				<Hero />
 			</section>
-			<section>
+			<section className="container">
 				<StatsSection />
 			</section>
-			<section>
+			<section className="container">
 				<BMISection />
 			</section>
-			<section>
+			<section className="container">
 				<RecipeCollection />
 			</section>
 		</div>
