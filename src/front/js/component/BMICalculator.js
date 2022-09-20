@@ -7,8 +7,9 @@ const BMICalculator = () => {
   const [weight, setWeight] = useState();
 
   const handleBmi = () => {
-    let value = ([weight / height / height] * 703).toFixed(1);
-    setBmi(value);
+    let value = (weight / height / height).toFixed(1);
+    setBmi(value * 703);
+    
     if (value < 18.5) {
       setInfo("Under Weight");
     } else if (value > 18.5 && vallue <= 24.9) {
@@ -43,8 +44,9 @@ const BMICalculator = () => {
       <button className="btn btn-orange" onClick={handleBmi}>
         Calculate
       </button>
-      <h1>Your BMI is: {bmi}</h1>
-      <h4>info: {info}</h4>
+      <h4 className="mt-4"><strong>Your BMI is:</strong></h4>
+        <h1 className="m-2">{bmi}</h1>
+      <h4 className="m-2"><strong>Your Range info:</strong> <br />{info}</h4>
     </div>
   );
 };
