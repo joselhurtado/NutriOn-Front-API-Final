@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 				User:[],
-				recipeData: [],
+				recipePopular: [],
 				// recipeVegan: [],
 				// recipeKeto: [],
 				// recipePaleo: [],
