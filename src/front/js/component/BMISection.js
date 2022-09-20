@@ -44,7 +44,7 @@ export const BMISection = () => {
         <div className="col-sm-5 mx-auto">
           <div className="card text-center" style={{ maxWidth: "25rem" }}>
             <div className="card-body">
-              <div className="row m-2">
+              <div className="row">
                 <h1 className="card-title m-2">Calculate Your BMI</h1>
                 <div className="col">
                   <BMICalculator />
