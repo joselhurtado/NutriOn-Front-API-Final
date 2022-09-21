@@ -5,7 +5,7 @@ import BMICalculator from "./BMICalculator";
 export const BMISection = () => {
   return (
     <div className="BMISection">
-      <div className="row mainHBMI">
+      <div className="row mainBMI">
         <div className="col-sm-7">
           <h1 className="text-light">Calculate your BMI</h1>
           <p className="text-light">
@@ -45,7 +45,7 @@ export const BMISection = () => {
           <div className="card text-center" style={{ maxWidth: "25rem" }}>
             <div className="card-body">
               <div className="row">
-                <h1 className="card-title m-2">Calculate Your BMI</h1>
+                <h1 className="card-title">Calculate Your BMI</h1>
                 <div className="col">
                   <BMICalculator />
                 </div>

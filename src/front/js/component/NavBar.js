@@ -7,14 +7,14 @@ export const NavBar = () => {
 	const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not used yet)
 
 	return (
-		<div className="navbar navbar-expand-md fixed-top">
+		<div className="navbar navbar-expand-sm fixed-top">
 			<div className="container">
 				<Link to="/">
 					<img className="NavLogo" src={NavLogo} alt="NutriOn Logo"/>
 				</Link>
 				<div className="dropdown">
 				<Link to="/LoginPage">
-					<span className="btn btn-orange m-2" href="#" role="button">
+					<span className="btn btn-orange" href="#" role="button">
 					LOG IN
 					</span>
 				</Link>

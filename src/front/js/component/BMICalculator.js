@@ -11,13 +11,13 @@ const BMICalculator = () => {
     setBmi(value);
 
     if (value < 18.5) {
-      setInfo(<div className="alert alert-success m-2">Under Weight</div>); //BMI bottom info Alert
+      setInfo(<div className="alert alert-success">Under Weight</div>); //BMI bottom info Alert
     } else if (value > 18.5 && value <= 24.9) {
-      setInfo(<div className="alert alert-info m-2">Healthy</div>);
+      setInfo(<div className="alert alert-info">Healthy</div>);
     } else if (value > 24.9 && value < 30) {
-      setInfo(<div className="alert alert-warning m-2">Overweight</div>);
+      setInfo(<div className="alert alert-warning">Overweight</div>);
     } else {
-      setInfo(<div className="alert alert-danger m-2">Obese</div>);
+      setInfo(<div className="alert alert-danger">Obese</div>);
     }
   };
 
@@ -33,7 +33,7 @@ const BMICalculator = () => {
         />
       </div>
 
-      <div className="col-sm m-2">
+      <div className="col-sm">
         <label>Set Weight in Pound</label>
         <input
           className="BMIinput"
@@ -43,15 +43,14 @@ const BMICalculator = () => {
         />
       </div>
 
-      <button className="container btn btn-orange mt-4" onClick={handleBmi}>
+      <button className="container btn btn-orange mb-2 mt-2" onClick={handleBmi}>
         Calculate BMI
       </button>
-      <h4 className="mt-4">
+      <h2>
         <strong>Your BMI is:</strong>
-      </h4>
-      <h1 className="align-middle m-2"></h1>
-      <div className="BMIresult">{bmi}</div>
-      <p className="m-2">
+      </h2>
+      <div className="align-middle BMIresult">{bmi}</div>
+      <p>
         <strong>Your Range info:</strong>
         <div className="alert">{info}</div>
       </p>
