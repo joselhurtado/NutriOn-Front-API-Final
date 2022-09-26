@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 
-export const Search = () => {
-    const [text, setText] = useState('');
-    const navigate = useNavigate();
-    const submitHandler = (e) => {
-        e.preventDefault();
-        navigate('/searchResults/' + text);
 
-    };
+export const Search = () => {
+    const {store, actions} = useContext(Context);
+    const [text, setText] = useState('');
     
 	return (
-    <form className="container" onSubmit={submitHandler}>
+    <form className="container">
         <div className="col-sm text-center m-2">
                     <input
                     className="form-control" 
@@ -22,12 +19,26 @@ export const Search = () => {
                     value={text} 
                     autoFocus />
         <div className="container text-center m-2">
-            <div className="btn btnSearch" type="submit"><span className="fas fa-search"></span> Search</div>
+            <div className="btn btnSearch" type="submit" onClick={(e)=> {
+                actions.getResultsRecipes(text)
+                e.preventDefault();
+            }
+            }><span className="fas fa-search"></span> Search</div>
         </div>
         </div>
-        <h1>{text}</h1>
+        <h2>{store.getResultsRecipes ? (
+        <div>{store.recipeResults && store.recipeResults.map((item, index) => {
+            return (
+                <div key={index} className="row text-center">
+                {item}
+                </div>
+            )
+        })}</div>
+        ):(
+            <div className="text-center text-light"></div>
+        )}</h2>
     </form>
 );
 }
- 
+
 export default Search;

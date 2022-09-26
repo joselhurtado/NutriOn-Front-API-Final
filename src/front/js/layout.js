@@ -4,11 +4,11 @@ import ScrollToTop from "../js/component/scrollToTop.js";
 
 import { Home } from "../js/pages/Home";
 import { LandingPage } from "../js/pages/LandingPage";
-import { SearchResults } from "../js/pages/SearchResults";
 import { ResetPassword } from "../js/pages/ResetPassword";
 import { Login } from "../js/pages/LoginPage";
-import { SearchPage } from "../js/pages/SearchPage";
+import { ResultsPage } from "./pages/ResultsPage";
 
+import { PopularPage } from "../js/pages/PopularPage";
 import { VeganPage } from "../js/pages/VeganPage";
 import { VegetarianPage } from "../js/pages/VegetarianPage";
 import { KetoPage } from "../js/pages/KetoPage";
@@ -22,7 +22,7 @@ import injectContext from "../js/store/appContext";
 
 import { NavBar } from "../js/component/NavBar";
 import { Footer } from "../js/component/footer";
-import RecipeDetails from "../js/component/RecipeDetails";
+import SingleRecipe from "../js/pages/SingleRecipe";
 import Profile from "../js/pages/Profile";
 
 const Layout = () => {
@@ -44,16 +44,14 @@ const Layout = () => {
           <Route element={<SignUpQuestionsPage />} path="/SignUpQuestions" />
           <Route element={<SignUpQuestionsGoalsPage />} path="/SignUpQuestionsGoals" />
           <Route element={<LandingPage />} path="/landingPage" />
-          <Route element={<SearchPage />} path="/SearchPage" />
-
+          <Route element={<PopularPage />} path="/PopularPage" />
           <Route element={<VeganPage />} path="/VeganPage" />
           <Route element={<VegetarianPage />} path="/VegetarianPage" />
           <Route element={<KetoPage />} path="/KetoPage" />
           <Route element={<PaleoPage />} path="/PaleoPage" />
-
+          <Route element={<ResultsPage />} path="/ResultsPage" />
           <Route element={<WelcomePage />} path="/WelcomePage" />
-          <Route element={<RecipeDetails />} path="/recipe/:theid" />
-          <Route element={<SearchResults />} path="/SeachResults/:search" />
+          <Route element={<SingleRecipe />} path="/SingleRecipe/:theid" />
           <Route element={<h1>404 Not Found!</h1>} />
         </Routes>
         <Footer />

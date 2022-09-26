@@ -31,7 +31,7 @@ export default function RecipeCard() {
               <h4 className="card-title">{x.title}</h4>
               <p className="card-text">{x.calories}</p>
               <div className="d-flex justify-content-between">
-                <Link to={`/recipe/${x.id}`} className="btn btn-orange">
+                <Link to={`/SingleRecipe/${x.id}`} className="btn btn-orange">
                   Read More
                 </Link>
                 <a

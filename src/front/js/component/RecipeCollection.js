@@ -116,7 +116,7 @@ export const RecipeCollection = () => {
             alt="Explore All Collection image"
             />
             <div className="card-img-overlay cardOrange">
-            <Link to="/SearchPage">
+            <Link to="/PopularPage">
             <h5 className="card-title">Explore All<br />Recipes<span className="fa fa-arrow-right"></span></h5>
 			</Link>
             </div>

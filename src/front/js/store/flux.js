@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      User: [],
+      // User: [],
       recipePopular: [],
       recipeInstructions: [],
       recipeResults: [],
@@ -13,9 +13,8 @@ const getState = ({ getStore, getActions, setStore }) => {
     },
     actions: {
       getPopularRecipes: async () => {
-        //New Function to Call Popular Recipes
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${process.env.APIfood}&minCarbs=10&maxCarbs=2000&number=3`
+          `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${process.env.APIfood}&minCarbs=100&maxCarbs=1000&number=3`
         );
         const payload = await response.json();
         setStore({ recipePopular: payload });
@@ -23,26 +22,24 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       getInstructionsRecipes: async () => {
-        //New Function to Call Instructions Recipes
         const response = await fetch(
           `https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=3`
         );
         const payload = await response.json();
         setStore({ recipeInstructions: payload.recipes });
-        console.log(payload, "Instructions Recipes Flux");
+        console.log(payload, "Recipe Instructions from Flux");
       },
 
-      getResultsRecipes: async (name) => {
+      getResultsRecipes: async (text) => {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&query=${name}&number=3`
+          `https://api.spoonacular.com/recipes/complexSearch?query=${text}&apiKey=${process.env.APIfood}&number=3`
         );
         const payload = await response.json();
-        setStore({ recipeResults: payload.results });
-        console.log(payload, "Recipes Results Recipes");
+        setStore({ recipeResults: payload.recipes });
+        console.log(payload, "::::::::Results from Flux Recipes:::::::::::");
       },
 
       getVeganRecipes: async () => {
-        //New Function to Call Vegan Recipes
         const response = await fetch(
           `https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&number=3`
         );
@@ -52,7 +49,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       getKetoRecipes: async () => {
-        //New Function to Call Keto Recipes
         const response = await fetch(
           `https://api.spoonacular.com/recipes/complexSearch?query=keto&apiKey=${process.env.APIfood}&number=3`
         );
@@ -62,7 +58,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       getPaleoRecipes: async () => {
-        //New Function to Call Paleo Recipes
         const response = await fetch(
           `https://api.spoonacular.com/recipes/complexSearch?query=paleo&apiKey=${process.env.APIfood}&number=3`
         );
@@ -72,7 +67,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       getVegetarianRecipes: async () => {
-        //New Function to Call Vegetarian Recipes
         const response = await fetch(
           `https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&apiKey=${process.env.APIfood}&number=3`
         );
@@ -81,15 +75,13 @@ const getState = ({ getStore, getActions, setStore }) => {
         console.log(payload, "Vegetarian Recipes");
       },
 
-      addFavorites: (item) => {
-        //Favorites Function
+      addFavorites: (item) => {         //Favorites Function
         const store = getStore(); //Access to the Store
         store.favorites.push(item); //Push Item
         setStore(store); //Save the Changes under Store (Update the State)
       },
 
-      removeFavorites: (index) => {
-        //Remove Favorites Function
+      removeFavorites: (index) => {         //Remove Favorites Function
         const store = getStore();
         let updatedList = store.favorites.filter((item, i) => index != i);
         setStore({ favorites: updatedList });
