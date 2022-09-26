@@ -16,14 +16,10 @@ export default function RecipeCardKeto() {
             <div key={i} className="col-sm card m-2 cardShape" style={{minWidth: "18rem"}}>
                 <img src={`https://spoonacular.com/recipeImages/${x.id}-556x370.${x.imageType}`} className="card-img-top shapeImageTop" alt="recipe Image" />
                     <div className="card-body text-light">
-                        <h4 className="card-title mb-4">{x.title}</h4>
-                        <p className="card-text"><strong>Calories: </strong>{x.calories}</p>
-                        <p className="card-text"><strong>Protein: </strong>{x.protein}</p>
-                        <p className="card-text"><strong>Fat: </strong>{x.fat}</p>
-                        <p className="card-text"><strong>Carbs: </strong>{x.carbs}</p>
+                        <h4 className="card-title mb-4"><strong>{x.title}</strong></h4>
                         <div className="d-flex mt-4 justify-content-between">
                         <Link to={`/recipe/${x.id}`} className="btn btn-orange">
-                        Instructions
+                        Read More
                         </Link>
                         <a onClick={() => actions.addFavorites(x)} className="btn btn-outline-orange fa fa-heart" />
                         </div>

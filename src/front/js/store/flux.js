@@ -15,70 +15,70 @@ const getState = ({ getStore, getActions, setStore }) => {
       getPopularRecipes: async () => {
         //New Function to Call Popular Recipes
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${process.env.APIfood}&minCarbs=10&maxCarbs=2000&number=12`
+          `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${process.env.APIfood}&minCarbs=10&maxCarbs=2000&number=3`
         );
         const payload = await response.json();
         setStore({ recipePopular: payload });
-        console.log(payload, "Payload Popular Recipes Flux");
+        console.log(payload, "Popular Recipes Flux");
       },
 
       getInstructionsRecipes: async () => {
         //New Function to Call Instructions Recipes
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=12`
+          `https://api.spoonacular.com/recipes/random?apiKey=${process.env.APIfood}&number=3`
         );
         const payload = await response.json();
         setStore({ recipeInstructions: payload.recipes });
-        console.log(payload, "Payload Instructions Recipes Flux");
+        console.log(payload, "Instructions Recipes Flux");
       },
 
       getResultsRecipes: async (name) => {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&query=${name}&number=12`
+          `https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&query=${name}&number=3`
         );
         const payload = await response.json();
         setStore({ recipeResults: payload.results });
-        console.log(payload, "Payload Results Recipes");
+        console.log(payload, "Recipes Results Recipes");
       },
 
       getVeganRecipes: async () => {
         //New Function to Call Vegan Recipes
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&number=12`
+          `https://api.spoonacular.com/recipes/complexSearch?query=vegan&apiKey=${process.env.APIfood}&number=3`
         );
         const payload = await response.json();
         setStore({ recipeVegan: payload.results });
-        console.log(payload, "Payload Vegan Recipes");
+        console.log(payload, "Vegan Recipes");
       },
 
       getKetoRecipes: async () => {
         //New Function to Call Keto Recipes
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=keto&apiKey=${process.env.APIfood}&number=12`
+          `https://api.spoonacular.com/recipes/complexSearch?query=keto&apiKey=${process.env.APIfood}&number=3`
         );
         const payload = await response.json();
         setStore({ recipeKeto: payload.results });
-        console.log(payload, "Payload Keto Recipes");
+        console.log(payload, "Keto Recipes");
       },
 
       getPaleoRecipes: async () => {
         //New Function to Call Paleo Recipes
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=paleo&apiKey=${process.env.APIfood}&number=12`
+          `https://api.spoonacular.com/recipes/complexSearch?query=paleo&apiKey=${process.env.APIfood}&number=3`
         );
         const payload = await response.json();
         setStore({ recipePaleo: payload.results });
-        console.log(payload, "Payload Paleo Recipes");
+        console.log(payload, "Paleo Recipes");
       },
 
       getVegetarianRecipes: async () => {
         //New Function to Call Vegetarian Recipes
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&apiKey=${process.env.APIfood}&number=`
+          `https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&apiKey=${process.env.APIfood}&number=3`
         );
         const payload = await response.json();
         setStore({ recipeVegetarian: payload.results });
-        console.log(payload, "Payload Vegetarian Recipes");
+        console.log(payload, "Vegetarian Recipes");
       },
 
       addFavorites: (item) => {
@@ -95,21 +95,21 @@ const getState = ({ getStore, getActions, setStore }) => {
         setStore({ favorites: updatedList });
       },
 
-      newUser: async () => {
-        //New Function to Call Existing Users
-        const response = await fetch(process.env.DATABASE_URL + "/api/signUp");
-        const payload = await response.json();
-        setStore({ User: payload.results });
-        console.log(payload, "New User Created on the Backend");
-      },
+      // newUser: async () => {
+      //   //New Function to Call Existing Users
+      //   const response = await fetch(process.env.DATABASE_URL + "/api/signUp");
+      //   const payload = await response.json();
+      //   setStore({ User: payload.results });
+      //   console.log(payload, "New User Created on the Backend");
+      // },
 
-      getUser: async () => {
-        //New Function to Call New Users
-        const response = await fetch(process.env.DATABASE_URL + "/api/getUser");
-        const payload = await response.json();
-        setStore({ User: payload.results });
-        console.log(payload, "Get existing User from Backend");
-      },
+      // getUser: async () => {
+      //   //New Function to Call New Users
+      //   const response = await fetch(process.env.DATABASE_URL + "/api/getUser");
+      //   const payload = await response.json();
+      //   setStore({ User: payload.results });
+      //   console.log(payload, "Get existing User from Backend");
+      // },
     },
   };
 };
