@@ -1,30 +1,33 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export const Search = ({ getQuery }) => {
+export const Search = () => {
     const [text, setText] = useState('');
-    const onChange = (q) => {
-        setText(q)
-        getQuery(q)
-    }
+    const navigate = useNavigate();
+    const submitHandler = (e) => {
+        e.preventDefault();
+        navigate('/searchResults/' + text);
 
+    };
+    
 	return (
-    <div className="row">
-        <div className="col-sm">
-                    <input type="search" 
+    <form className="container" onSubmit={submitHandler}>
+        <div className="col-sm text-center m-2">
+                    <input
                     className="form-control" 
                     placeholder="Search Your Recipe" 
                     aria-label="Search"
+                    onChange={(e) => setText(e.target.value)}
+                    type="text" 
                     value={text} 
-                    onChange={(e) => onChange(e.target.value)}
                     autoFocus />
-        </div>
-        <div className="col-sm-2">
+        <div className="container text-center m-2">
             <div className="btn btnSearch" type="submit"><span className="fas fa-search"></span> Search</div>
         </div>
-    </div>
-
+        </div>
+        <h1>{text}</h1>
+    </form>
 );
 }
-
-
+ 
 export default Search;

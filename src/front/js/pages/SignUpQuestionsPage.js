@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/SignUp.css";
 import { Link } from "react-router-dom";
+import HeroWelcome from "/src/front/img/Hero Healthy Food.png";
 
 export const SignUpQuestionsPage = () => {
   return (
@@ -136,7 +137,7 @@ export const SignUpQuestionsPage = () => {
                       <Link to="/SignupQuestionsGoals">
                         <div className="SignupFormbtn">
                           <button
-                            className="btn btn-orange"
+                            className="btn btn-light"
                             id="Questionbuttons1"
                           >
                             Go Back
@@ -156,6 +157,7 @@ export const SignUpQuestionsPage = () => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );

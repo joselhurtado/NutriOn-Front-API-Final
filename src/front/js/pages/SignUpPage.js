@@ -2,10 +2,11 @@ import React from "react";
 import "../../styles/SignUp.css";
 import { Link } from "react-router-dom";
 import { SignUpFormUser } from "/src/front/js/component/SignUpFormUser";
-import HeroWelcome from "/src/front/img/Food Recipe Hero.png";
 
 export const SignUpPage = () => {
 	return (
+
+		
 	<div id="welcomePage" className="heroWelcome">
 		<div className='row mainHero'>
 			<div className="col-sm heroHeadline">
@@ -39,14 +40,11 @@ export const SignUpPage = () => {
 						</div>
 					</div>
 					<Link to ="/SignupQuestions">
-					<div className="SignupFormbtn">
-						<button className="btn btn-orange" id="Questionbuttons1">Go Back</button>
+					<div className="SignupFormbtn space-between">
+						<button className="btn btn-light" id="Questionbuttons1">Go Back</button>
 						<button className="btn btn-orange" id="Questionbuttons">Continue</button>
 					</div>
 					</Link>
-			</div>
-				<div className="col-sm ">
-					<img className="heroImage" src={HeroWelcome} />
 			</div>
 		</div>
 	</div>

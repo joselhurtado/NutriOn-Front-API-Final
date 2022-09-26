@@ -16,11 +16,19 @@ export const ResetPassword = () => {
 					</div>
 					<div className="container mt-2">
 					
-				<Link to="/dashboard">
+				<Link to="/LoginPage">
 					<span className="container btn btn-orange mt-4" href="#" role="button">
 					RESET PASSWORD
 					</span>
 				</Link>
+				</div>
+
+				<div className="row introBTN text-center">
+				<Link to="/LoginPage">
+					<div className="col-sm float-right">
+					<p className="text-light">BACK TO LOGIN</p>
+					</div>
+					</Link>
 				</div>
 
 		

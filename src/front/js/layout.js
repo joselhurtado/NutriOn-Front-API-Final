@@ -4,9 +4,16 @@ import ScrollToTop from "../js/component/scrollToTop.js";
 
 import { Home } from "../js/pages/Home";
 import { LandingPage } from "../js/pages/LandingPage";
+import { SearchResults } from "../js/pages/SearchResults";
 import { ResetPassword } from "../js/pages/ResetPassword";
 import { Login } from "../js/pages/LoginPage";
 import { SearchPage } from "../js/pages/SearchPage";
+
+import { VeganPage } from "../js/pages/VeganPage";
+import { VegetarianPage } from "../js/pages/VegetarianPage";
+import { KetoPage } from "../js/pages/KetoPage";
+import { PaleoPage } from "../js/pages/PaleoPage";
+
 import { WelcomePage } from "../js/pages/WelcomePage";
 import { SignUpPage } from "../js/pages/SignUpPage";
 import { SignUpQuestionsPage } from "../js/pages/SignUpQuestionsPage";
@@ -38,8 +45,15 @@ const Layout = () => {
           <Route element={<SignUpQuestionsGoalsPage />} path="/SignUpQuestionsGoals" />
           <Route element={<LandingPage />} path="/landingPage" />
           <Route element={<SearchPage />} path="/SearchPage" />
+
+          <Route element={<VeganPage />} path="/VeganPage" />
+          <Route element={<VegetarianPage />} path="/VegetarianPage" />
+          <Route element={<KetoPage />} path="/KetoPage" />
+          <Route element={<PaleoPage />} path="/PaleoPage" />
+
           <Route element={<WelcomePage />} path="/WelcomePage" />
           <Route element={<RecipeDetails />} path="/recipe/:theid" />
+          <Route element={<SearchResults />} path="/SeachResults/:search" />
           <Route element={<h1>404 Not Found!</h1>} />
         </Routes>
         <Footer />

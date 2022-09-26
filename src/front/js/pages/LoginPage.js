@@ -21,7 +21,7 @@ export const Login = () => {
   					<p className="text-light">Your password must be 8-20 characters long.</p>
 					</small>
 				
-				<Link to="/dashboard">
+				<Link to="/">
 					<span className="container btn btn-orange mt-4" href="#" role="button">
 					LOGIN IN
 					</span>

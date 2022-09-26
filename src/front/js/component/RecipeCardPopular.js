@@ -6,6 +6,7 @@ export default function RecipeCardPopular() {
     const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not used yet)
     const [recipes, setPopular] = useState([]); //UseState run the function from recipes (API)
     console.log(recipes, "Recipes Popular")
+    
     useEffect(() => {
         setPopular(store.recipePopular)
     }, [store.recipePopular] // In Here we call out again to keep stored the data on re-load the page
@@ -17,8 +18,10 @@ export default function RecipeCardPopular() {
                 <img src={`https://spoonacular.com/recipeImages/${x.id}-556x370.${x.imageType}`} className="card-img-top shapeImageTop" alt="recipe Image" />
                     <div className="card-body text-light">
                         <h4 className="card-title mb-4"><strong>{x.title}</strong></h4>
-                        <p className="card-text"><strong>Ready Minutes: </strong>{x.readyInMinutes}</p>
-                        <p className="card-text"><strong>Servings: </strong>{x.servings}</p>
+                        <p className="card-text"><strong>Calories: </strong>{x.calories}</p>
+                        <p className="card-text"><strong>Protein: </strong>{x.protein}</p>
+                        <p className="card-text"><strong>Fat: </strong>{x.fat}</p>
+                        <p className="card-text"><strong>Carbs: </strong>{x.carbs}</p>
                         <div className="d-flex mt-4 justify-content-between">
                         <Link to={`/recipe/${x.id}`} className="btn btn-orange">
                         Instructions

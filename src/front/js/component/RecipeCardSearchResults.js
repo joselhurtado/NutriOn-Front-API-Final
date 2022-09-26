@@ -1,16 +1,17 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Context } from "/src/front/js/store/appContext.js";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
-export default function RecipeCard() {
+export default function RecipeCardSearchResults() {
   const { store, actions } = useContext(Context); //Const to call store data from Flux (Actions is not used yet)
   const [recipes, setRecipes] = useState([]); //UseState run the function from recipes (API)
   console.log(recipes, "Recipes");
+
   useEffect(
     () => {
-      setRecipes(store.recipePopular);
+      setRecipes(store.recipeResults);
     },
-    [store.recipePopular] // In Here we call out again to keep stored the data on re-load the page
+    [store.recipeResults] // In Here we call out again to keep stored the data on re-load the page
   );
 
   return (
@@ -29,7 +30,6 @@ export default function RecipeCard() {
             />
             <div className="card-body text-light">
               <h4 className="card-title">{x.title}</h4>
-              <p className="card-text">{x.calories}</p>
               <div className="d-flex justify-content-between">
                 <Link to={`/recipe/${x.id}`} className="btn btn-orange">
                   Read More
