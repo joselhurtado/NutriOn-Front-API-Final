@@ -8,8 +8,8 @@ export default function RecipeCardSearchResults() {
     console.log(recipes, "Recipes Popular")
     
     useEffect(() => {
-        setPopular(store.recipePopular)
-    }, [store.recipePopular] // In Here we call out again to keep stored the data on re-load the page
+        setPopular(store.recipeResults)
+    }, [store.recipeResults] // In Here we call out again to keep stored the data on re-load the page
     )
 
     return (

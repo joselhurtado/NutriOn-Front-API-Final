@@ -5,6 +5,7 @@ import { HeroSearch } from "/src/front/js/component/HeroSearch";
 
 export const ResultsPage = (props) => {
   const { store, actions } = useContext(Context);
+  console.log(store, ":::Store on Results Page:::")
   return (
     <div className="container">
       <div>

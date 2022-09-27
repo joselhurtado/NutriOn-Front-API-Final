@@ -14,8 +14,8 @@ export const RecipeCollection = () => {
     <h1 className="text-center">Explore Recipes</h1>
     <p className="text-center">What would you like to cook today?</p>
 
-    <div class="row m-2">
-        <div class="col-sm-3 ">
+    <div className="row m-2">
+        <div className="col-sm-3 ">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -28,7 +28,7 @@ export const RecipeCollection = () => {
             </div>
         </div>
 
-        <div class="col-sm-3">
+        <div className="col-sm-3">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -41,7 +41,7 @@ export const RecipeCollection = () => {
         </div>
         </div>
 
-        <div class="col-sm-3">
+        <div className="col-sm-3">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -54,7 +54,7 @@ export const RecipeCollection = () => {
         </div>
         </div>
 
-        <div class="col-sm-3">
+        <div className="col-sm-3">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -68,8 +68,8 @@ export const RecipeCollection = () => {
         </div>
     </div>
 
-    <div class="row m-2">
-        <div class="col-sm-3">
+    <div className="row m-2">
+        <div className="col-sm-3">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -82,7 +82,7 @@ export const RecipeCollection = () => {
             </div>
         </div>
 
-        <div class="col-sm-3">
+        <div className="col-sm-3">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -95,7 +95,7 @@ export const RecipeCollection = () => {
         </div>
         </div>
 
-        <div class="col-sm-3">
+        <div className="col-sm-3">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -108,7 +108,7 @@ export const RecipeCollection = () => {
         </div>
         </div>
 
-        <div class="col-sm-3">
+        <div className="col-sm-3">
         <div className="card bg-dark text-white">
             <img
             className="card-img"

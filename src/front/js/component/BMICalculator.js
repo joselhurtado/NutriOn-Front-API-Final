@@ -50,10 +50,10 @@ const BMICalculator = () => {
         <strong>Your BMI is:</strong>
       </h2>
       <div className="align-middle BMIresult">{bmi}</div>
-      <p>
+      <div>
         <strong>Your Range info:</strong>
         <div className="alert">{info}</div>
-      </p>
+      </div>
     </div>
   );
 };
