@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "../js/component/scrollToTop.js";
 
@@ -30,31 +30,46 @@ const Layout = () => {
   // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
   const basename = process.env.BASENAME || "";
 
+  //State for Search
+  const [query, setQuery] = useState("");
+
   return (
     <div>
       <BrowserRouter basename={basename}>
-      <ScrollToTop>
-        <NavBar />
-        <Routes>
-          <Route index element={<Home />} path="/" />
-          <Route element={<Profile />} path="/dashboard" />
-          <Route element={<Login />} path="/LoginPage" />
-          <Route element={<ResetPassword />} path="/ResetPassword" />
-          <Route element={<SignUpPage />} path="/SignUP" />
-          <Route element={<SignUpQuestionsPage />} path="/SignUpQuestions" />
-          <Route element={<SignUpQuestionsGoalsPage />} path="/SignUpQuestionsGoals" />
-          <Route element={<LandingPage />} path="/landingPage" />
-          <Route element={<PopularPage />} path="/PopularPage" />
-          <Route element={<VeganPage />} path="/VeganPage" />
-          <Route element={<VegetarianPage />} path="/VegetarianPage" />
-          <Route element={<KetoPage />} path="/KetoPage" />
-          <Route element={<PaleoPage />} path="/PaleoPage" />
-          <Route element={<ResultsPage />} path="/ResultsPage" />
-          <Route element={<WelcomePage />} path="/WelcomePage" />
-          <Route element={<SingleRecipe />} path="/SingleRecipe/:theid" />
-          <Route element={<h1>404 Not Found!</h1>} />
-        </Routes>
-        <Footer />
+        <ScrollToTop>
+          <NavBar />
+          <Routes>
+            <Route index element={<Home />} path="/" />
+            <Route element={<Profile />} path="/dashboard" />
+            <Route element={<Login />} path="/LoginPage" />
+            <Route element={<ResetPassword />} path="/ResetPassword" />
+            <Route element={<SignUpPage />} path="/SignUP" />
+            <Route element={<SignUpQuestionsPage />} path="/SignUpQuestions" />
+            <Route
+              element={<SignUpQuestionsGoalsPage />}
+              path="/SignUpQuestionsGoals"
+            />
+            <Route element={<LandingPage />} path="/landingPage" />
+            <Route
+              element={<PopularPage query={query} setQuery={setQuery}/>}
+              path="/PopularPage"
+            />
+            <Route element={<VeganPage query={query} setQuery={setQuery} />} path="/VeganPage" />
+            <Route
+              element={<VegetarianPage query={query} setQuery={setQuery} />}
+              path="/VegetarianPage"
+            />
+            <Route element={<KetoPage query={query} setQuery={setQuery} />} path="/KetoPage" />
+            <Route element={<PaleoPage query={query} setQuery={setQuery} />} path="/PaleoPage" />
+            <Route
+              element={<ResultsPage query={query} setQuery={setQuery} />}
+              path="/ResultsPage"
+            />
+            <Route element={<WelcomePage />} path="/WelcomePage" />
+            <Route element={<SingleRecipe />} path="/SingleRecipe/:theid" />
+            <Route element={<h1>404 Not Found!</h1>} />
+          </Routes>
+          <Footer />
         </ScrollToTop>
       </BrowserRouter>
     </div>
@@ -62,5 +77,3 @@ const Layout = () => {
 };
 
 export default injectContext(Layout);
-
-
