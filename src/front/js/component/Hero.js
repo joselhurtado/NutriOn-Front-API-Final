@@ -7,16 +7,17 @@ export const Hero = () => {
 	return (
         <div className="heroSection">
             <div className='row mainHero'>
-                <div className="col-sm heroHeadline">
+                <div className="col-sm-6 heroHeadline">
                     <h1 className='text-light'>Good health starts with what you eat.</h1>
                         <p className="text-light">Want to eat more mindfully? Track meals, learn about your habits, and reach your goals with NutriOn</p>
+                        <br />
                             <Link to="/WelcomePage">
                                 <span className="btn btn-orange" href="#" role="button">
                                 JOIN THE CHALLENGE
                                 </span>
                             </Link>
                 </div>
-                    <div className="col-sm ">
+                    <div className="col-sm-6 ">
                         <img className="heroImage" src={Hero1} />
                     </div>
             </div>

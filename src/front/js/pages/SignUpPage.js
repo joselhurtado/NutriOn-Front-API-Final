@@ -21,24 +21,27 @@ export const SignUpPage = () => {
 						<input className="form-control" type="text" placeholder="Enter your username" required></input>
 						<input className="form-control" type="email" placeholder="Enter your password" required></input>
 					</div>
+					<hr />
 					<div className="weightgoal">
 						<h5 className="weight-title">What is your weight goal?</h5>
 					</div>
 					<div className="weightgoalbuttons">
 						<div class="d-flex justify-content-center">
-							<button class="btn btn-light m-2" type="button" id="weightbtn">Lose Weight</button>
-							<button class="btn btn-light m-2" type="button" id="weightbtn">Gain Weight</button>
-							<button class="btn btn-light m-2" type="button" id="weightbtn">Maintain Weight</button>
+							<button class="btn btn-outline-light m-2" type="button" id="weightbtn">Lose Weight</button>
+							<button class="btn btn-outline-light m-2" type="button" id="weightbtn">Gain Weight</button>
+							<button class="btn btn-outline-light m-2" type="button" id="weightbtn">Maintain Weight</button>
 						</div>
+						<hr />
 						<div className="genderP">
 						<h5 className="gender-title">What is your gender?</h5>
 						</div>
 						<div className="Genderdiv d-flex justify-content-center">
-							<button class="btn btn-light m-2" type="button" id="genderbtn">Male</button>
-							<button class="btn btn-light m-2" type="button" id="genderbtn">Female</button>
-							<button class="btn btn-light m-2" type="button" id="genderbtn">Other</button>
+							<button class="btn btn-outline-light m-2" type="button" id="genderbtn">Male</button>
+							<button class="btn btn-outline-light m-2" type="button" id="genderbtn">Female</button>
+							<button class="btn btn-outline-light m-2" type="button" id="genderbtn">Other</button>
 						</div>
 					</div>
+					<hr />
 					<div className="SignupFormbtn space-between">
 						<Link to ="/WelcomePage">
 						<button className="btn btn-light" id="Questionbuttons1">Go Back</button>

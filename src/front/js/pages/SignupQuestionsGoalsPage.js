@@ -8,10 +8,11 @@ export const SignUpQuestionsGoalsPage = () => {
     <div id="welcomePage" className="heroWelcome">
       <div className="containerBMI">
         <div className="Calculator text-center ">
-          <h3 className="CalcTitle">Your BMI is:</h3>
+          <h5 className="CalcTitle">Your BMI is:</h5>
           <div className="BMInumberbox">
             <h1 className="BMInumber">18.5</h1>
           </div>
+          <hr />
           <div className="tableheader">
             <h3 className="Tableh3 justify-content-center">BMI Healthy Weight</h3>
           </div>
@@ -29,8 +30,9 @@ export const SignUpQuestionsGoalsPage = () => {
               <p className="Righttablep"> 30 and above</p>
             </div>
           </div>
+          <hr />
           <div className="CalorieP">
-            <h3 className="CaloriesP">Recommended Daily Calories</h3>
+            <h5 className="weight-title">Recommended Daily Calories</h5>
           </div>
           <div>
             <div className="BMIweight">
@@ -42,6 +44,7 @@ export const SignUpQuestionsGoalsPage = () => {
               ></input>
             </div>
           </div>
+          <hr />
           <div>
           <div className="container SignupForm btn space-between">
 						<Link to ="/SignUpQuestions">

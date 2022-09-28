@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/SignUp.css";
+import "../../styles/home.css";
 import { Link } from "react-router-dom";
 import HeroWelcome from "/src/front/img/Hero Healthy Food.png";
 
@@ -12,9 +13,10 @@ export const SignUpQuestionsPage = () => {
             {" "}
             Tell us about yourself!
           </h1>
+          <hr />
           <div className="SignupForm2">
             <div className="genderP">
-              <p className="gender-title">Select your ideal diet?</p>
+              <h5 className="gender-title">Select your ideal diet?</h5>
             </div>
             <div className="dietcheckboxes">
               <div className="form-check form-check-inline">
@@ -95,9 +97,11 @@ export const SignUpQuestionsPage = () => {
                     No restrictions
                   </label>
                 </div>
-                <div className="BMItitle container align-between">
+                <hr />
+                <div className="container align-between">
+                  <h5 className="gender-title">BODY MASS INDEX</h5>
                   <p className="BMIinfo ">
-                    BODY MASS INDEX (BMI) IS A MEASURE OF BODY FAT BASED ON
+                    (BMI) IS A MEASURE OF BODY FAT BASED ON
                     HEIGHT AND WEIGHT THAT APPLIES TO ADULT MEN AND WOMEN
                   </p>
                 </div>
@@ -107,32 +111,34 @@ export const SignUpQuestionsPage = () => {
                   <input className="weight" placeholder="Weight"></input>
                   <input className="age" placeholder="Age"></input>
                 </div>
+                <hr />
                 <div className="BMIinfo">
-                  <p className="BMIactivity">How active are you?</p>
+                  <h5 className="BMIactivity">How active are you?</h5>
                   <div className="BMIactivitybtn">
-                    <div className="3btnweight">
+                    <div className="d-flex justify-content-center">
                       <button
-                        className="btnactivity"
+                        className="btn btn-outline-light m-2"
                         type="button"
                         id="activitybtn"
                       >
                         Light
                       </button>
                       <button
-                        className="btnactivity"
+                        className="btn btn-outline-light m-2"
                         type="button"
                         id="activitybtn"
                       >
                         Moderate
                       </button>
                       <button
-                        className="btnactivity"
+                        className="btn btn-outline-light m-2"
                         type="button"
                         id="activitybtn"
                       >
                         Active
                       </button>
                     </div>
+                    <hr />
                     <div className="SignupForm btn space-between">
                       <Link to ="/SignUp">
                       <button className="btn btn-light" id="Questionbuttons1">Go Back</button>

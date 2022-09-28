@@ -12,7 +12,7 @@ export const BMISection = () => {
             Maintaining a weight in the healthy BMI range is one way to support
             overall health as you age.
           </p>
-
+          <hr />
           <div className="d-flex">
             <table className="table text-light ">
               <thead>
