@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "../../styles/bmr.css";
+
 
 class bmr extends Component {
   constructor() {
@@ -150,7 +152,7 @@ class bmr extends Component {
             </label>
             
             <label className="m-2">
-              <input className="m-2"
+              <input className="radioInput m-2"
                 type="radio"
                 checked={this.state.gender == "2"}
                 onChange={this.handlegenderChange}
@@ -160,10 +162,11 @@ class bmr extends Component {
               Male
             </label>
           </div>
+          <hr/>
           <div className="container m-2">
             <label className="m-2"><strong>Weight</strong></label>
             <label>
-              <input className="m-2"
+              <input className="radioInput m-2"
                 type="radio"
                 checked={this.state.weightType == "1"}
                 onChange={this.handleweightTypeChange}
@@ -173,7 +176,7 @@ class bmr extends Component {
               Imperial (in lbs)
             </label>
             <label className="m-2">
-              <input className="m-2"
+              <input className="radioInput m-2"
                 type="radio"
                 checked={this.state.weightType == "2"}
                 onChange={this.handleweightTypeChange}
@@ -191,6 +194,7 @@ class bmr extends Component {
               max="999"
             />
           </div>
+          <hr/>
           <div className="m-2">
             <label className="label -m2"><strong>Height in feet and inches</strong></label>
             <input 
@@ -212,6 +216,7 @@ class bmr extends Component {
               max="11"
             />
           </div>
+          <hr/>
           <div className="inputwrap m-2">
             <label className="label m-2"><strong>Age in years</strong></label>
             <input
@@ -224,12 +229,14 @@ class bmr extends Component {
               max="120"
             />
           </div>
+          <hr/>
           <button className="btn btn-orange m-2" type="button" onClick={() => this.calculateBMR()}>
             Calculate BMR
           </button>
           {resultBMR}
           {resultSug}
-          <div className="container m-4">
+          <hr/>
+          <div className="container m-2">
             <div className="inputwrap m-2">
               <label className="label m-2"><strong>Workout in a Week</strong></label>
               <select
@@ -257,7 +264,7 @@ class bmr extends Component {
                 </option>
               </select>
             </div>
-            <button className="btn btn-orange m-4" type="button" onClick={() => this.calculateKCalories()}>
+            <button className="btn btn-orange m-2" type="button" onClick={() => this.calculateKCalories()}>
               Calculate Calories
             </button>
             {resultPAL}

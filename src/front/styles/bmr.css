@@ -1,0 +1,10 @@
+.radioInput {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+hr{
+    border: 2px solid #cccccc;
+    border-radius: 25px;
+}
