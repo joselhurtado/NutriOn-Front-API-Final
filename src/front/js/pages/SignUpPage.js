@@ -22,29 +22,31 @@ export const SignUpPage = () => {
 						<input className="form-control" type="email" placeholder="Enter your password" required></input>
 					</div>
 					<div className="weightgoal">
-						<p className="weight-title">What is your weight goal?</p>
+						<h5 className="weight-title">What is your weight goal?</h5>
 					</div>
 					<div className="weightgoalbuttons">
-						<div class="3btnweight">
-							<button class="btnweight" type="button" id="weightbtn">Lose Weight</button>
-							<button class="btnweight" type="button" id="weightbtn">Gain Weight</button>
-							<button class="btnweight" type="button" id="weightbtn">Maintain Weight</button>
+						<div class="d-flex justify-content-center">
+							<button class="btn btn-light m-2" type="button" id="weightbtn">Lose Weight</button>
+							<button class="btn btn-light m-2" type="button" id="weightbtn">Gain Weight</button>
+							<button class="btn btn-light m-2" type="button" id="weightbtn">Maintain Weight</button>
 						</div>
 						<div className="genderP">
-						<p className="gender-title">What is your gender?</p>
+						<h5 className="gender-title">What is your gender?</h5>
 						</div>
-						<div className="Genderdiv">
-							<button class="btnweight" type="button" id="genderbtn">Male</button>
-							<button class="btnweight" type="button" id="genderbtn">Female</button>
-							<button class="btnweight" type="button" id="genderbtn">Other</button>
+						<div className="Genderdiv d-flex justify-content-center">
+							<button class="btn btn-light m-2" type="button" id="genderbtn">Male</button>
+							<button class="btn btn-light m-2" type="button" id="genderbtn">Female</button>
+							<button class="btn btn-light m-2" type="button" id="genderbtn">Other</button>
 						</div>
 					</div>
-					<Link to ="/SignupQuestions">
 					<div className="SignupFormbtn space-between">
+						<Link to ="/WelcomePage">
 						<button className="btn btn-light" id="Questionbuttons1">Go Back</button>
+						</Link>
+						<Link to ="/SignupQuestions">
 						<button className="btn btn-orange" id="Questionbuttons">Continue</button>
+						</Link>
 					</div>
-					</Link>
 			</div>
 		</div>
 	</div>

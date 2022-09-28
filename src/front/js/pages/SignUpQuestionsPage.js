@@ -133,22 +133,12 @@ export const SignUpQuestionsPage = () => {
                         Active
                       </button>
                     </div>
-                    <div>
-                      <Link to="/SignupQuestionsGoals">
-                        <div className="SignupFormbtn">
-                          <button
-                            className="btn btn-light"
-                            id="Questionbuttons1"
-                          >
-                            Go Back
-                          </button>
-                          <button
-                            className="btn btn-orange"
-                            id="Questionbuttons"
-                          >
-                            Continue
-                          </button>
-                        </div>
+                    <div className="SignupForm btn space-between">
+                      <Link to ="/SignUp">
+                      <button className="btn btn-light" id="Questionbuttons1">Go Back</button>
+                      </Link>
+                      <Link to ="/SignUpQuestionsGoals">
+                      <button className="btn btn-orange" id="Questionbuttons">Continue</button>
                       </Link>
                     </div>
                   </div>

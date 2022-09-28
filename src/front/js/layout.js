@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "../js/component/scrollToTop.js";
 
 import { Home } from "../js/pages/Home";
-import { LandingPage } from "../js/pages/LandingPage";
 import { ResetPassword } from "../js/pages/ResetPassword";
 import { Login } from "../js/pages/LoginPage";
 import { ResultsPage } from "./pages/ResultsPage";
@@ -59,7 +58,6 @@ const Layout = () => {
               element={<SignUpQuestionsGoalsPage />}
               path="/SignUpQuestionsGoals"
             />
-            <Route element={<LandingPage />} path="/landingPage" />
 
             <Route
               element={<PopularPage query={query} setQuery={setQuery} />}

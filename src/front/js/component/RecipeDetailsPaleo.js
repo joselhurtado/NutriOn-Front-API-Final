@@ -31,6 +31,7 @@ export default function RecipeDetailsPaleo() {
           <div className="col-md-6">
             <div className="card-body">
               <h5 className="card-title singleRecipeTitle">{recipe?.title}</h5>
+              <hr />
               <p className="card-text">
                 <strong>carbs: </strong>
                 {recipe?.carbs}

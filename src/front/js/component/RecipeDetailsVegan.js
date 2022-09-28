@@ -31,8 +31,9 @@ export default function RecipeDetailsVegan() {
           <div className="col-md-6">
             <div className="card-body">
               <h5 className="card-title singleRecipeTitle">{recipe?.title}</h5>
+              <hr />
               <p className="card-text">
-                <strong>carbs: </strong>
+                <strong>Carbs: </strong>
                 {recipe?.carbs}
               </p>
               <p className="card-text">

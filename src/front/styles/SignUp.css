@@ -105,11 +105,9 @@
     margin-top: 20px;
     font-weight: 700;
 }
-.3btnweight{
-    display: flex;
-    
-}
+
 .btnweight{
+    display: flex;
     margin: 10px;
     width: 130px;
     height: 40px;
@@ -185,7 +183,7 @@
     margin: 5px;
 }
 .containerBMI{
-    display: flex;
+    display: inline-flex;
 }
 .BMInumberbox{
     height: 80px;
@@ -218,14 +216,18 @@
     padding: 3px;
     padding-right: 165px;
     }
+
 .containerBMI{
-    margin-left: 600px
+    margin-left: 500px
 }
 .tablep{
     display: flex;
 }
 .ImageRight{
-    margin-left: 30px;
+    margin-left: 20px;
+    width: 550px;
+    height: auto;
+    margin-top: 100px;
 }
 .CaloriesP{
     text-align: center;

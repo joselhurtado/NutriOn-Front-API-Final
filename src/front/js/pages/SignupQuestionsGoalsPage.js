@@ -7,15 +7,15 @@ export const SignUpQuestionsGoalsPage = () => {
   return (
     <div id="welcomePage" className="heroWelcome">
       <div className="containerBMI">
-        <div className="Calculator">
+        <div className="Calculator text-center ">
           <h3 className="CalcTitle">Your BMI is:</h3>
           <div className="BMInumberbox">
             <h1 className="BMInumber">18.5</h1>
           </div>
           <div className="tableheader">
-            <h3 className="Tableh3">BMI Healthy Weight</h3>
+            <h3 className="Tableh3 justify-content-center">BMI Healthy Weight</h3>
           </div>
-          <div className="tablep">
+          <div className="tablep container justify-content-center">
             <div className="leftp">
               <p className="lefttablep">Underweight</p>
               <p className="lefttablep">Normal Weight</p>
@@ -43,18 +43,14 @@ export const SignUpQuestionsGoalsPage = () => {
             </div>
           </div>
           <div>
-            <div>
-              <Link to="/SearchPage">
-                <div className="SignupFormbtn">
-                  <button className="btn btn-light" id="Questionbuttons1">
-                    Go Back
-                  </button>
-                  <button className="btn btn-orange" id="Questionbuttons">
-                    Get Recipes
-                  </button>
-                </div>
-              </Link>
-            </div>
+          <div className="container SignupForm btn space-between">
+						<Link to ="/SignUpQuestions">
+						<button className="btn btn-light" id="Questionbuttons1">Go Back</button>
+						</Link>
+						<Link to ="/PopularPage">
+						<button className="btn btn-orange" id="Questionbuttons">Get Recipes</button>
+						</Link>
+					</div>
           </div>
         </div>
 
