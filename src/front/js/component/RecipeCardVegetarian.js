@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 export default function RecipeCardVegetarian() {
     const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not used yet)
-    const [recipes, setRecipes] = useState([]); //UseState run the function from recipes (API)
+    const [recipes, setVegetarian] = useState([]); //UseState run the function from recipes (API)
     console.log(recipes, "Recipes")
 
     useEffect(() => {
-        setRecipes(store.recipeVegetarian)
+        setVegetarian(store.recipeVegetarian)
     }, [store.recipeVegetarian] // In Here we call out again to keep stored the data on re-load the page
     )
 
@@ -20,7 +20,7 @@ export default function RecipeCardVegetarian() {
                     <div className="card-body text-light">
                         <h4 className="card-title mb-4"><strong>{x.title}</strong></h4>
                         <div className="d-flex mt-4 justify-content-between">
-                        <Link to={`/recipe/${x.id}`} className="btn btn-orange">
+                        <Link to={`/SingleRecipeVegetarian/${x.id}`} className="btn btn-orange">
                         Read More
                         </Link>
                         <a onClick={() => actions.addFavorites(x)} className="btn btn-outline-orange fa fa-heart" />

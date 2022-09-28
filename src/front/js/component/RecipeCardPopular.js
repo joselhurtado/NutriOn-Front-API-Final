@@ -19,7 +19,7 @@ export default function RecipeCardPopular() {
                     <div className="card-body text-light">
                         <h4 className="card-title mb-4"><strong>{x.title}</strong></h4>
                         <div className="d-flex mt-4 justify-content-between">
-                        <Link to={`/SingleRecipe/${x.id}`} className="btn btn-orange">
+                        <Link to={`/SingleRecipePopular/${x.id}`} className="btn btn-orange">
                         Read More
                         </Link>
                         <a onClick={() => actions.addFavorites(x)} className="btn btn-outline-orange fa fa-heart" />

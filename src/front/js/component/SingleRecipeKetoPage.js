@@ -1,11 +1,11 @@
 import React from "react";
 import "../../styles/home.css";
-import  RecipeDetails from "/src/front/js/component/RecipeDetails";
+import  RecipeDetailsKeto from "/src/front/js/component/RecipeDetailsKeto";
 import { ButtonDiets } from "/src/front/js/component/ButtonDiets";
 import { BMRSection } from "/src/front/js/component/BMRSection";
 import { HeroSearch } from "/src/front/js/component/HeroSearch";
 
-export const SingleRecipe = () => {
+export const SingleRecipeKetoPage = () => {
 	return (
 		<div className="container">
 			<div>
@@ -15,7 +15,7 @@ export const SingleRecipe = () => {
 				<ButtonDiets />
 			</div>
 			<div>
-				<RecipeDetails />
+				<RecipeDetailsKeto />
 			</div>
 			<div>
 				<BMRSection />
@@ -24,4 +24,4 @@ export const SingleRecipe = () => {
 )
 }
 
-export default SingleRecipe;
+export default SingleRecipeKetoPage;

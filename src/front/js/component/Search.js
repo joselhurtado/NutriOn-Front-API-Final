@@ -4,6 +4,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 export const Search = () => {
   const { store, actions } = useContext(Context);
+  console.log(store, ":::Store on Search Component:::")
   const [text, setText] = useState("");
   const navigate = useNavigate();
 
@@ -25,7 +26,7 @@ export const Search = () => {
             type="submit"
             onClick={(e) => {
               let search = actions.getResultsRecipes(text)
-              //   e.preventDefault();
+              // e.preventDefault();
               if (search) {
                 navigate("/ResultsPage");
               }
@@ -48,7 +49,7 @@ export const Search = () => {
               })}
           </div>
         ) : (
-          <div className="text-center text-light">No Results</div>
+          <div className="text-center text-light"></div>
         )}
       </h2>
     </form>

@@ -3,19 +3,19 @@ import { Context } from "../store/appContext";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export default function RecipeCard() {
+export default function RecipeDetailsVegetarian() {
   const { store } = useContext(Context);
   const params = useParams();
   const [recipe, setRecipe] = useState({});
 
   useEffect(() => {
-    const data = store.recipePopular.find((item) => {
+    const data = store.recipeVegetarian.find((item) => {
       if (item.id == params.theid) {
         return item;
       }
     });
     setRecipe(data);
-  }, [store.recipePopular]);
+  }, [store.recipeVegetarian]);
 
   return (
     <div className="container">

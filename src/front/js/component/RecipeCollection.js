@@ -15,7 +15,7 @@ export const RecipeCollection = () => {
     <p className="text-center">What would you like to cook today?</p>
 
     <div className="row m-2">
-        <div className="col-sm-3 ">
+        <div className="col-sm-4 ">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -23,12 +23,14 @@ export const RecipeCollection = () => {
             alt="Vegan Collection image"
             />
                 <div className="card-img-overlay">
+                <Link to="/VeganPage">
                 <h5 className="card-title ">Vegan<br />Recipes</h5>
+                </Link>
                 </div>
             </div>
         </div>
 
-        <div className="col-sm-3">
+        <div className="col-sm-4">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -36,25 +38,14 @@ export const RecipeCollection = () => {
             alt="Vegetarian Collection image"
             />
             <div className="card-img-overlay">
+            <Link to="/VegetarianPage">
             <h5 className="card-title">Vegetarian<br />Recipes</h5>
+            </Link>
             </div>
         </div>
         </div>
 
-        <div className="col-sm-3">
-        <div className="card bg-dark text-white">
-            <img
-            className="card-img"
-            src={GlutenFreeCollection}
-            alt="Gluten Free Collection image"
-            />
-            <div className="card-img-overlay">
-            <h5 className="card-title">Gluten Free<br />Recipes</h5>
-            </div>
-        </div>
-        </div>
-
-        <div className="col-sm-3">
+        <div className="col-sm-4">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -62,14 +53,14 @@ export const RecipeCollection = () => {
             alt="Keto Collection image"
             />
             <div className="card-img-overlay">
+            <Link to="/KetoPage">
             <h5 className="card-title">Keto<br />Recipes</h5>
+            </Link>
             </div>
         </div>
         </div>
-    </div>
 
-    <div className="row m-2">
-        <div className="col-sm-3">
+        <div className="col-sm-4">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -77,38 +68,14 @@ export const RecipeCollection = () => {
             alt="Paleo Collection image"
             />
                 <div className="card-img-overlay">
+                <Link to="/KetoPage">
                 <h5 className="card-title">Paleo<br />Recipes</h5>
+                </Link>
                 </div>
             </div>
-        </div>
-
-        <div className="col-sm-3">
-        <div className="card bg-dark text-white">
-            <img
-            className="card-img"
-            src={PescetarianCollection}
-            alt="Pescetarian Collection image"
-            />
-            <div className="card-img-overlay">
-            <h5 className="card-title">Pescetarian<br />Recipes</h5>
             </div>
-        </div>
-        </div>
 
-        <div className="col-sm-3">
-        <div className="card bg-dark text-white">
-            <img
-            className="card-img"
-            src={NoRestrictionsCollection}
-            alt="No Restrictions Collection image"
-            />
-            <div className="card-img-overlay">
-            <h5 className="card-title">No Restrictions<br />Recipes</h5>
-            </div>
-        </div>
-        </div>
-
-        <div className="col-sm-3">
+            <div className="col-sm-4">
         <div className="card bg-dark text-white">
             <img
             className="card-img"
@@ -122,8 +89,9 @@ export const RecipeCollection = () => {
             </div>
         </div>
         </div>
+        </div>
 
-    </div>
+
     </div>
 );
 };

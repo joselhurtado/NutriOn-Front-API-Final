@@ -9,10 +9,20 @@ import { Login } from "../js/pages/LoginPage";
 import { ResultsPage } from "./pages/ResultsPage";
 
 import { PopularPage } from "../js/pages/PopularPage";
+import { SingleRecipePopularPage } from "./pages/SingleRecipePopularPage";
+
 import { VeganPage } from "../js/pages/VeganPage";
+import { SingleRecipeVeganPage } from "./pages/SingleRecipeVeganPage";
+
 import { VegetarianPage } from "../js/pages/VegetarianPage";
+import { SingleRecipeVegetarianPage } from "./pages/SingleRecipeVegetarianPage";
+
 import { KetoPage } from "../js/pages/KetoPage";
+import { SingleRecipeKetoPage } from "./pages/SingleRecipeKetoPage";
+
 import { PaleoPage } from "../js/pages/PaleoPage";
+import { SingleRecipePaleoPage } from "./pages/SingleRecipePaleoPage";
+
 
 import { WelcomePage } from "../js/pages/WelcomePage";
 import { SignUpPage } from "../js/pages/SignUpPage";
@@ -22,7 +32,7 @@ import injectContext from "../js/store/appContext";
 
 import { NavBar } from "../js/component/NavBar";
 import { Footer } from "../js/component/footer";
-import SingleRecipe from "../js/pages/SingleRecipe";
+
 import Profile from "../js/pages/Profile";
 
 const Layout = () => {
@@ -50,23 +60,60 @@ const Layout = () => {
               path="/SignUpQuestionsGoals"
             />
             <Route element={<LandingPage />} path="/landingPage" />
+
             <Route
-              element={<PopularPage query={query} setQuery={setQuery}/>}
+              element={<PopularPage query={query} setQuery={setQuery} />}
               path="/PopularPage"
             />
-            <Route element={<VeganPage query={query} setQuery={setQuery} />} path="/VeganPage" />
+            <Route
+              element={<SingleRecipePopularPage />}
+              path="/SingleRecipePopular/:theid"
+            />
+
+            <Route
+              element={<VeganPage query={query} setQuery={setQuery} />}
+              path="/VeganPage"
+            />
+            <Route
+              element={<SingleRecipeVeganPage />}
+              path="/SingleRecipeVegan/:theid"
+            />
+
             <Route
               element={<VegetarianPage query={query} setQuery={setQuery} />}
               path="/VegetarianPage"
             />
-            <Route element={<KetoPage query={query} setQuery={setQuery} />} path="/KetoPage" />
-            <Route element={<PaleoPage query={query} setQuery={setQuery} />} path="/PaleoPage" />
+            <Route
+              element={<SingleRecipeVegetarianPage />}
+              path="/SingleRecipeVegetarian/:theid"
+            />
+
+            <Route
+              element={<KetoPage query={query} setQuery={setQuery} />}
+              path="/KetoPage"
+            />
+
+            <Route
+              element={<SingleRecipeKetoPage />}
+              path="/SingleRecipeKeto/:theid"
+            />
+
+            <Route
+              element={<PaleoPage query={query} setQuery={setQuery} />}
+              path="/PaleoPage"
+            />
+            <Route
+              element={<SingleRecipePaleoPage />}
+              path="/SingleRecipePaleo/:theid"
+            />
+
             <Route
               element={<ResultsPage query={query} setQuery={setQuery} />}
               path="/ResultsPage"
             />
+
             <Route element={<WelcomePage />} path="/WelcomePage" />
-            <Route element={<SingleRecipe />} path="/SingleRecipe/:theid" />
+
             <Route element={<h1>404 Not Found!</h1>} />
           </Routes>
           <Footer />

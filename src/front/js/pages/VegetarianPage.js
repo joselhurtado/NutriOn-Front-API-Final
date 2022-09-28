@@ -13,7 +13,6 @@ export const VegetarianPage = () => {
       <div>
         <ButtonDiets />
       </div>
-
       <div>
         <h1 className="text-left">Vegetarian Recipes</h1>
         <p className="text-left ">Tasty recipes the whole family will love.</p>

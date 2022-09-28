@@ -11,7 +11,7 @@ body {
 }
 
 .NavLogo {
-  max-width: 125px;
+  max-width: 250px;
   height: auto;
   margin-left: 10px;
   align-items: center;
@@ -190,6 +190,11 @@ h5.card-title {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.5em;
+
+}
+
+a {
+  text-decoration: none;
 }
 
 h5.card-title:hover {
