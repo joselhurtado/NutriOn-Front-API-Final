@@ -299,9 +299,10 @@ export function SignupFormQuestions(){
                         {" "}
                         Tell us about yourself!
                     </h1>
+                    <hr/>
                     <div className="SignupForm2">
                         <div className="genderP">
-                        <p className="gender-title">Select your ideal diet?</p>
+                        <h5 className="gender-title">Select your ideal diet?</h5>
                         </div>
                     </div>
                         <div className="dietcheckboxes">
@@ -412,11 +413,14 @@ export function SignupFormQuestions(){
                                 </label>
                             </div>
                         </div>
+                        <hr/>
+
                         <div className="BMItitle container align-between">
-                            <p className="BMIinfo ">
-                            BODY MASS INDEX (BMI) IS A MEASURE OF BODY FAT BASED ON
-                            HEIGHT AND WEIGHT THAT APPLIES TO ADULT MEN AND WOMEN
-                            </p>
+                            <h5 className="BMIinfo ">
+                            BODY MASS INDEX
+                            </h5>
+                            <p className="text-light">(BMI) is a measure of body fat based on
+                            height and weight that applies to adult men and women</p>
                         </div>
                         <div className="BMIheight">
                             <input
@@ -432,15 +436,17 @@ export function SignupFormQuestions(){
                             onChange={(e) => setdatatwo({ ...datatwo, age:e.target.value })}
                             className="age" placeholder="Age"></input>
                         </div>
+                        <hr/>
+
                         <div className="BMIinfo">
-                            <p className="BMIactivity">How active are you?</p>
+                            <h5 className="BMIactivity">How active are you?</h5>
                             <div className="BMIactivitybtn">
                                 <div className="3btnweight">
                                     <button
                                     onClick={(e) => {
                                         setdatatwo({ ...datatwo, activity: "Light activity" });
                                       }}
-                                        className="btnactivity"
+                                        className="btn btn-outline-light m-2"
                                         value={"Light"}
                                         type="button"
                                         id="activitybtn"
@@ -451,7 +457,7 @@ export function SignupFormQuestions(){
                                         onClick={(e) => {
                                             setdatatwo({ ...datatwo, activity: "Moderately active" });
                                         }}
-                                        className="btnactivity"
+                                        className="btn btn-outline-light m-2"
                                         type="button"
                                         id="activitybtn"
                                     >
@@ -461,16 +467,17 @@ export function SignupFormQuestions(){
                                     onClick={(e) => {
                                         setdatatwo({ ...datatwo, activity: "Active" });
                                       }}
-                                        className="btnactivity"
+                                        className="btn btn-outline-light m-2"
                                         type="button"
                                         id="activitybtn"
                                     >
                                         Active
                                     </button>
                                 </div>
+                                <hr/>
                                 <div className="SignupFormbtn">
                                     <button
-                                        className="btn btn-orange"
+                                        className="btn btn-light"
                                         id="Questionbuttons1"
                                     >
                                         Go Back

@@ -108,79 +108,12 @@ export default function Profile({
           </div>
         </div>
       </div>
-
       <div>
 				<BMRSection />
 			</div>
-
       <div>
         <RecipeCardPopular />
       </div>
-
-      {/* Slider Meals Section */}
-
-      {/* <div className="col-6 favoriteCard">
-        <div className="card">
-          <div className="card-body d-flex justify-content-center align-items-center flex-column favoriteMeal">
-            <h1 className="card-title text-center text-dark">
-              My Favorite Meals
-            </h1>
-            <div
-              id="carouselExampleSlidesOnly"
-              className="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div className="carousel-inner ">
-                <div className="carousel-item active  " data-bs-interval="2000">
-                  <img
-                    src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=1200,1200"
-                    className="d-block "
-                    alt="..."
-                  />
-                </div>
-                <div className="carousel-item" data-bs-interval="2000">
-                  <img
-                    src="https://images.theconversation.com/files/368263/original/file-20201109-22-lqiq5c.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
-                    className="d-block"
-                    alt="..."
-                  />
-                </div>
-                <div className="carousel-item" data-bs-interval="2000">
-                  <img
-                    src="https://colonydiner.com/wp-content/uploads/2021/03/French.jpg"
-                    className="d-block"
-                    alt="..."
-                  />
-                </div>
-              </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
