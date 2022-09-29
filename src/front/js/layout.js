@@ -41,6 +41,7 @@ const Layout = () => {
 
   //State for Search
   const [query, setQuery] = useState("");
+  console.log(query, "/////query from Layout///////")
 
   return (
     <div>

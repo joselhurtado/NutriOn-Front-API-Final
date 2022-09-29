@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Context from "../store/appContext.js";
 import "../../styles/home.css";
 import { HeroSearch } from "/src/front/js/component/HeroSearch";
@@ -8,7 +8,6 @@ import tempImage from "/src/front/img/Hero Healthy Food.png"
 export const ResultsPage = (props) => {
   const { store, actions } = useContext(Context);
   console.log(store, ":::Store on Results Page:::")
-
 
   return (
     <div className="container">
