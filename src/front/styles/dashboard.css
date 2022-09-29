@@ -1,143 +1,142 @@
-.footer-parent-box{
-    background-color: #05727A;
+.footer-parent-box {
+  background-color: #05727a;
 }
-.ageInput{
-    margin-bottom: 5%;
-    width: 30%;
-    font-family: 'Poppins', sans-serif;
-    color: #252525;
-    text-transform: uppercase;
-    margin-left:35%;
-    margin-top:-4%;
+.ageInput {
+  margin-bottom: 5%;
+  width: 30%;
+  font-family: "Poppins", sans-serif;
+  color: #252525;
+  text-transform: uppercase;
+  margin-left: 35%;
+  margin-top: -4%;
 }
 
 #dashboardProfile {
-    margin-top: 125px;
-    background-color: none;
+  margin-top: 125px;
+  background-color: none;
 }
 
 #profilePicture {
-    border-radius: 100%;
+  border-radius: 100%;
 }
 
-.height{
-    width:55%;
-    margin-left: 5%;
+.height {
+  width: 55%;
+  margin-left: 5%;
 }
-.weight{
-    margin-bottom: 5%;
-    width: 30%;
-    margin-left: 5%;
+.weight {
+  margin-bottom: 5%;
+  width: 30%;
+  margin-left: 5%;
 }
-.activity-level{
-    margin-left: 5%;
-    width: 85%;
-}
-
-.bmiDiet{
-    padding: 50px;
-    align-items: center;
-    background-color: rgb(209, 69, 50);
-    border-radius: 20px;
-}
-.calorie-calculator{
-    margin-right: 16%;
-    margin-left: 6%;
+.activity-level {
+  margin-left: 5%;
+  width: 85%;
 }
 
-.fullName{
-    color: white;
-    font-size: 118%;
-    font-family: 'Poppins', sans-serif;
-    width: 560px;
+.bmiDiet {
+  padding: 50px;
+  align-items: center;
+  background-color: rgb(209, 69, 50);
+  border-radius: 20px;
 }
-.usernameInput{
-    color: white;
-    font-size: 118%;
-    font-family: 'Poppins', sans-serif;
-}
-.emailAddressInput{
-    color: white;
-    font-size: 118%;
-    font-family: 'Poppins', sans-serif;
-}
-.innerCircle{
-    height: 390px;
-}
-.list-group-item{
-    background: none;
-}
-.favoriteCard{
-    margin-top: 90px;
-    margin-bottom: 50px;
-    background-color: rgb(230, 230, 230);
+.calorie-calculator {
+  margin-right: 16%;
+  margin-left: 6%;
 }
 
-.profilePicture{
-    width: 200px;
-    height: 90%;
-    background-color: #004C52;
-    margin-left: 22%;
+.fullName {
+  color: white;
+  font-size: 118%;
+  font-family: "Poppins", sans-serif;
+  width: 560px;
 }
-.feetInput{
-    font-family: 'Poppins', sans-serif;
-    color: #252525;
-    width:60%;
-    text-transform: uppercase;
-    margin-left: 40%;
-    margin-top:-8%;
-    margin-bottom:8%;
+.usernameInput {
+  color: white;
+  font-size: 118%;
+  font-family: "Poppins", sans-serif;
 }
-.inchesInput{
-    font-family: 'Poppins', sans-serif;
-    color: #252525;
-    width:60%;
-    text-transform: uppercase;
-    margin-top:-8%;
+.emailAddressInput {
+  color: white;
+  font-size: 118%;
+  font-family: "Poppins", sans-serif;
 }
-
-.calorieTitle{
-    padding-top:-20px;
+.innerCircle {
+  height: 390px;
 }
-.card-text-diet{
-    width: 225px;
-    margin: auto;
+.list-group-item {
+  background: none;
 }
-.personalDietCircle{
-    border-radius: 50%;
-    width: 395px;
-    margin: auto;
-    background: rgb(230, 230, 230);
-    
-}
-.dietCircleTitle{
-    margin-top: 45px;
-    width:80%;
-    margin-left: 10%;
+.favoriteCard {
+  margin-top: 90px;
+  margin-bottom: 50px;
+  background-color: rgb(230, 230, 230);
 }
 
-.favoriteMeal{
-    margin-top: -1rem;
-    margin-bottom: 1rem;
+.profilePicture {
+  width: 200px;
+  height: 90%;
+  background-color: #004c52;
+  margin-left: 22%;
 }
-.profile-pic-container{
-    border-radius: 60%;
-    height:auto;
-    width: 250px;
-    margin: 49px;
-    padding-top: 45px;
-    margin-right: 206px;
-    margin-top: -5px;
+.feetInput {
+  font-family: "Poppins", sans-serif;
+  color: #252525;
+  width: 60%;
+  text-transform: uppercase;
+  margin-left: 40%;
+  margin-top: -8%;
+  margin-bottom: 8%;
 }
-.profile-pic{
-    border-radius: 50%;
-    height:auto;
-    width:200px;
-    margin-left: 110px;
+.inchesInput {
+  font-family: "Poppins", sans-serif;
+  color: #252525;
+  width: 60%;
+  text-transform: uppercase;
+  margin-top: -8%;
 }
-.information-container{
-    padding-top: 116px;
+
+.calorieTitle {
+  padding-top: -20px;
 }
-.gender{
-    color: black;
+.card-text-diet {
+  width: 225px;
+  margin: auto;
+}
+.personalDietCircle {
+  border-radius: 50%;
+  width: 395px;
+  margin: auto;
+  background: rgb(230, 230, 230);
+}
+.dietCircleTitle {
+  margin-top: 45px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.favoriteMeal {
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+.profile-pic-container {
+  border-radius: 60%;
+  height: auto;
+  width: 250px;
+  margin: 49px;
+  padding-top: 45px;
+  margin-right: 206px;
+  margin-top: -5px;
+}
+.profile-pic {
+  border-radius: 50%;
+  height: auto;
+  width: 200px;
+  margin-left: 110px;
+}
+.information-container {
+  padding-top: 116px;
+}
+.gender {
+  color: black;
 }

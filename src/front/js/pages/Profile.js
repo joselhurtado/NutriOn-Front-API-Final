@@ -3,6 +3,7 @@ import "../../styles/dashboard.css";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
 import RecipeCardPopular from "/src/front/js/component/RecipeCardPopular";
+import { BMRSection } from "/src/front/js/component/BMRSection";
 
 export default function Profile({
   firstName = "",
@@ -105,136 +106,12 @@ export default function Profile({
               </div>
             </div>
           </div>
-          <div className="col-sm">
-            <div className="card calorie-calculator">
-              <h1 className="card-title text-center mt-4 mb-4">
-                Calorie Calculator
-              </h1>
-              <div className="row">
-                <h1 className="card-title text-center text-muted">My Height</h1>
-                <div className="col">
-                  <label
-                    for="exampleFormControlInput3"
-                    className="form-label bmiAge"
-                  ></label>
-                  <input
-                    type="text"
-                    className="form-control feetInput"
-                    id="exampleFormControlInput"
-                    defaultValue={userdatatwo.feet}
-                  />
-                </div>
-                <div className="col">
-                  <label
-                    for="exampleFormControlInput3"
-                    className="form-label"
-                  ></label>
-                  <input
-                    type="text"
-                    className="form-control inchesInput"
-                    id="exampleFormControlInput"
-                    defaultValue={userdatatwo.inches}
-                  />
-                </div>
-              </div>
-              <div className="col-sm">
-                <h1 className="card-title text-center text-muted">My Weight</h1>
-
-                <label
-                  for="exampleFormControlInput3"
-                  className="form-label bmiAge"
-                ></label>
-                <input
-                  type="text"
-                  className="form-control ageInput"
-                  id="exampleFormControlInput"
-                  placeholder="lbs"
-                  defaultValue={userdatatwo.weight}
-                />
-              </div>
-              <div className="container mb-4">
-                <div className="row">
-                  <h1 className="card-title text-center text-muted">gender</h1>
-                </div>
-                <div className="d-flex justify-content-center">
-                  <div className="form-check m-2">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="gridRadios"
-                      id="gridRadios1"
-                      value="option1"
-                      checked={userdata.sex == "Female" ? true : false}
-                    ></input>
-                    <label className="form-check-label" for="gridRadios1">
-                      Female
-                    </label>
-                  </div>
-                  <div className="form-check m-2">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="gridRadios"
-                      id="gridRadios2"
-                      value="option2"
-                      checked={userdata.sex == "Male" ? true : false}
-                    ></input>
-                    <label className="form-check-label" for="gridRadios2">
-                      Male
-                    </label>
-                  </div>
-                  <div className="form-check m-2">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="gridRadios"
-                      id="gridRadios3"
-                      value="option3"
-                      checked={userdata.sex == "Other" ? true : false}
-                    ></input>
-                    <label className="form-check-label" for="gridRadios3">
-                      Other
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <select
-                className="form-select activity-level"
-                aria-label="Default select example"
-              >
-                <option
-                  value="1"
-                  selected={userdata.sex == "Light" ? true : false}
-                >
-                  Light
-                </option>
-                <option
-                  value="2"
-                  selected={userdatatwo.activity == "Moderate" ? true : false}
-                >
-                  Moderate
-                </option>
-                <option
-                  value="3"
-                  selected={userdatatwo.activity == "Active" ? true : false}
-                >
-                  Active
-                </option>
-              </select>
-
-              <div className="d-flex justify-content-center m-4">
-                <button className="btn btn-orange" type="button">
-                  Calculate
-                </button>
-                <button className="btn btn-orange-outline" type="button">
-                  Clear
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+
+      <div>
+				<BMRSection />
+			</div>
 
       <div>
         <RecipeCardPopular />
