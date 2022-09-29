@@ -13,6 +13,11 @@
 
 #dashboardProfile {
     margin-top: 125px;
+    background-color: none;
+}
+
+#profilePicture {
+    border-radius: 100%;
 }
 
 .height{

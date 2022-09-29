@@ -1,10 +1,22 @@
 .radioInput {
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
 }
 
-hr{
-    border: 2px solid #cccccc;
-    border-radius: 25px;
+hr {
+  border: 2px solid #cccccc;
+  border-radius: 25px;
 }
+
+.resultBMR {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d14532;
+}
+
+.resultPAL {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d14532;
+  }

@@ -82,16 +82,16 @@ class bmr extends Component {
 
     let activitySug = ";";
     if (bmrCalc <= 1926) {
-      activitySug = "Suggestion: little or no exercise.";
+      activitySug = "little or no exercise.";
     } else if (bmrCalc > 1926 && bmrCalc <= 2207) {
-      activitySug = "Suggestion: Exercise 1-3 times/week.";
+      activitySug = "Exercise 1-3 times/week.";
     } else if (bmrCalc > 2207 && bmrCalc <= 2351) {
-      activitySug = "Suggestion: Exercise 4-5 times/week.";
+      activitySug = "Exercise 4-5 times/week.";
     } else if (bmrCalc > 2351 && bmrCalc <= 2488) {
       activitySug =
-        "Suggestion: Daily exercise or intense exercise 3-4 times/week.";
+        "Daily exercise or intense exercise 3-4 times/week.";
     } else if (bmrCalc > 2488 && bmrCalc <= 2796) {
-      activitySug = "Suggestion: Intense exercise 6-7 times/week.";
+      activitySug = "Intense exercise 6-7 times/week.";
     } else if (bmrCalc > 2796) {
       activitySug = "Very intense exercise daily, or physical job.";
     }

@@ -23,11 +23,11 @@ export default function Profile({
 	console.log(store.usersignupstats)
 
   return (
-    <div className="container">
+    <div id="dashboardProfile" className="container">
       <div className="container-flex">
         <div className="row">
-          <div className="col-sm card text-center">
-            <img
+          <div className="col-sm card text-center" style={{background:"none"}}>
+            <img id="profilePicture"
               src="https://images.theconversation.com/files/478225/original/file-20220809-24-orxjcu.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
               className="card-img-top"
               alt="..."

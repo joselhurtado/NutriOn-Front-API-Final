@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-import NavLogo from "/src/front/img/Logo_NutriON_White.png"
+import NavLogo from "/src/front/img/logo-color-nutrion.png"
 
 export const NavBar = () => {
 	const {store, actions} = useContext(Context); //Const to call store data from Flux (Actions is not used yet)

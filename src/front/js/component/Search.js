@@ -50,7 +50,7 @@ export const Search = () => {
               })}
           </div>
         ) : (
-          <div className="text-center text-light">No results</div>
+          <div className="text-center text-light"></div>
         )}
       </h2>
     </form>
