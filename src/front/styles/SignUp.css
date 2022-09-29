@@ -120,8 +120,6 @@
 }
 .btnactivity{
     margin: 10px;
-    width: 130px;
-    height: 40px;
     background-color: #8080807d;
     border-radius: 40px;
     border: none;
@@ -159,30 +157,43 @@
     margin-top: 20px;
 }
 .feet{
-    width: 80px;
-    height: 30px;
+    max-width: 100px;
+    height: 50px;
     margin: 5px;
+    border-radius: 20px;
+    text-align: center;
 }
 .WeightBMI{
     width: 80px;
-    height: 30px;
+    height: 50px;
     margin: 5px;
     text-align: center;
 }
 .inch{
-    width: 80px;
-    height: 30px;
+    max-width: 100px;
+    height: 50px;
     margin: 5px;
+    border-radius: 20px;
+    text-align: center;
+
+
 }
 .weightBtn{
-    width: 80px;
-    height: 30px;
+    max-width: 100px;
+    height: 50px;
     margin: 5px;
+    border-radius: 20px;
+    text-align: center;
+
+
 }
 .age{
-    width: 80px;
-    height: 30px;
+    max-width: 100px;
+    height: 50px;
     margin: 5px;
+    border-radius: 20px;
+    text-align: center;
+
 }
 .containerBMI{
     display: flex;

@@ -8,7 +8,7 @@ export const WelcomePage = () => {
 	<div id="welcomePage" className="heroWelcome">
 		<div className='row mainHero'>
 			<div className="col-sm heroHeadline">
-				<h1 className='text-light text-center m-2'>WELCOME TO NUTRION</h1>
+				<h1 className='text-light text-left m-2'>WELCOME TO NUTRION</h1>
 					<p className="text-light m-2">Let’s start your healthy journey.</p>
 
 					<div className="introBTN">
@@ -18,7 +18,7 @@ export const WelcomePage = () => {
 							</span>
 						</Link>
 
-						<Link to="/SignUP">
+						<Link to="/SignUpPage">
 							<span className="btn btn-orange m-2" href="#" role="button">
 							SIGN UP
 							</span>

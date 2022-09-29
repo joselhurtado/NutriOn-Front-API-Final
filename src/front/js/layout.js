@@ -3,8 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import { Context } from "../js/store/appContext";
 
 import { Home } from "../js/pages/Home";
-import { ResetPassword } from "../js/pages/ResetPassword";
-import { Login } from "../js/pages/LoginPage";
 import { ResultsPage } from "./pages/ResultsPage";
 
 import { PopularPage } from "../js/pages/PopularPage";
@@ -22,10 +20,11 @@ import { SingleRecipeKetoPage } from "./pages/SingleRecipeKetoPage";
 import { PaleoPage } from "../js/pages/PaleoPage";
 import { SingleRecipePaleoPage } from "./pages/SingleRecipePaleoPage";
 
+import { Login } from "../js/pages/LoginPage";
+import { ResetPassword } from "../js/pages/ResetPassword";
 import { WelcomePage } from "../js/pages/WelcomePage";
 import { SignUpPage } from "../js/pages/SignUpPage";
-import { SignUpQuestionsPage } from "../js/pages/SignUpQuestionsPage";
-import { SignUpQuestionsGoalsPage } from "./pages/SignupQuestionsGoalsPage";
+import { SignUpGoalsPage } from "../js/pages/SignUpGoalsPage";
 import injectContext from "../js/store/appContext";
 
 import { NavBar } from "../js/component/NavBar";
@@ -46,77 +45,72 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-          <NavBar />
-          {/* <Context.Provider value={value}> */}
-          <Routes>
-            <Route index element={<Home />} path="/" />
-            <Route element={<Profile />} path="/dashboard" />
-            <Route element={<Login />} path="/LoginPage" />
-            <Route element={<ResetPassword />} path="/ResetPassword" />
-            <Route element={<SignUpPage />} path="/SignUP" />
-            <Route element={<SignUpQuestionsPage />} path="/SignUpQuestions" />
-            <Route
-              element={<SignUpQuestionsGoalsPage />}
-              path="/SignUpQuestionsGoals"
-            />
+        <NavBar />
+        {/* <Context.Provider value={value}> */}
+        <Routes>
+          <Route index element={<Home />} path="/" />
+          <Route element={<Profile />} path="/Dashboard" />
+          <Route element={<Login />} path="/LoginPage" />
+          <Route element={<ResetPassword />} path="/ResetPassword" />
+          <Route element={<WelcomePage />} path="/WelcomePage" />
+          <Route element={<SignUpPage />} path="/SignUpPage" />
+          <Route element={<SignUpGoalsPage />} path="/SignUpGoalsPage" />
 
-            <Route
-              element={<PopularPage query={query} setQuery={setQuery} />}
-              path="/PopularPage"
-            />
-            <Route
-              element={<SingleRecipePopularPage />}
-              path="/SingleRecipePopular/:theid"
-            />
+          <Route
+            element={<PopularPage query={query} setQuery={setQuery} />}
+            path="/PopularPage"
+          />
+          <Route
+            element={<SingleRecipePopularPage />}
+            path="/SingleRecipePopular/:theid"
+          />
 
-            <Route
-              element={<VeganPage query={query} setQuery={setQuery} />}
-              path="/VeganPage"
-            />
-            <Route
-              element={<SingleRecipeVeganPage />}
-              path="/SingleRecipeVegan/:theid"
-            />
+          <Route
+            element={<VeganPage query={query} setQuery={setQuery} />}
+            path="/VeganPage"
+          />
+          <Route
+            element={<SingleRecipeVeganPage />}
+            path="/SingleRecipeVegan/:theid"
+          />
 
-            <Route
-              element={<VegetarianPage query={query} setQuery={setQuery} />}
-              path="/VegetarianPage"
-            />
-            <Route
-              element={<SingleRecipeVegetarianPage />}
-              path="/SingleRecipeVegetarian/:theid"
-            />
+          <Route
+            element={<VegetarianPage query={query} setQuery={setQuery} />}
+            path="/VegetarianPage"
+          />
+          <Route
+            element={<SingleRecipeVegetarianPage />}
+            path="/SingleRecipeVegetarian/:theid"
+          />
 
-            <Route
-              element={<KetoPage query={query} setQuery={setQuery} />}
-              path="/KetoPage"
-            />
+          <Route
+            element={<KetoPage query={query} setQuery={setQuery} />}
+            path="/KetoPage"
+          />
 
-            <Route
-              element={<SingleRecipeKetoPage />}
-              path="/SingleRecipeKeto/:theid"
-            />
+          <Route
+            element={<SingleRecipeKetoPage />}
+            path="/SingleRecipeKeto/:theid"
+          />
 
-            <Route
-              element={<PaleoPage query={query} setQuery={setQuery} />}
-              path="/PaleoPage"
-            />
-            <Route
-              element={<SingleRecipePaleoPage />}
-              path="/SingleRecipePaleo/:theid"
-            />
+          <Route
+            element={<PaleoPage query={query} setQuery={setQuery} />}
+            path="/PaleoPage"
+          />
+          <Route
+            element={<SingleRecipePaleoPage />}
+            path="/SingleRecipePaleo/:theid"
+          />
 
-            <Route
-              element={<ResultsPage query={query} setQuery={setQuery} />}
-              path="/ResultsPage"
-            />
+          <Route
+            element={<ResultsPage query={query} setQuery={setQuery} />}
+            path="/ResultsPage"
+          />
 
-            <Route element={<WelcomePage />} path="/WelcomePage" />
-
-            <Route element={<h1>404 Not Found!</h1>} />
-          </Routes>
-          <Footer />
-          {/* </Context.Provider> */}
+          <Route element={<h1>404 Not Found!</h1>} />
+        </Routes>
+        <Footer />
+        {/* </Context.Provider> */}
       </BrowserRouter>
     </div>
   );
