@@ -9,7 +9,7 @@ export const Context = React.createContext(null);
 
 const injectContext = (PassedComponent) => {
   const StoreWrapper = (props) => {
-    //this will be passed as the contenxt value
+    //this will be passed as the context value
     const [state, setState] = useState(
       getState({
         getStore: () => state.store,
@@ -36,8 +36,8 @@ const injectContext = (PassedComponent) => {
       state.actions.getKetoRecipes();
       state.actions.getPaleoRecipes();
       state.actions.getVegetarianRecipes();
-      // state.actions.newUser();
-      // state.actions.getUser();
+    //   state.actions.addsignupData([1, 2]);
+
     }, []);
 
     // The initial value for the context is not null anymore, but the current state of this component,

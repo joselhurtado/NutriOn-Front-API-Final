@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "../../styles/bmr.css";
-
-
 class bmr extends Component {
   constructor() {
     super();

@@ -23,7 +23,7 @@ export default function RecipeDetailsVegan() {
         <div className="row g-0">
           <div className="col-md-6 fillImage">
             <img
-              src={`https://spoonacular.com/recipeImages/${recipe?.id}-556x370.${recipe?.imageType}`}
+              src={`https://spoonacular.com/recipeImages/${recipe?.id}-312x231.${recipe?.imageType}`}
               className="img-fluid shapeImageTopSingle"
               alt="..."
             />

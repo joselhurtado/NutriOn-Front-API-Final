@@ -47,7 +47,7 @@
 }
 .Signup-div{
     width: 400px;
-    heigh: 400px;
+    height: 400px;
     background-color: #d8d8d88a;
     margin: auto;
 }
@@ -105,9 +105,11 @@
     margin-top: 20px;
     font-weight: 700;
 }
+.threebtnweight {
+    display: flex;
+}
 
 .btnweight{
-    display: flex;
     margin: 10px;
     width: 130px;
     height: 40px;
@@ -172,7 +174,7 @@
     height: 30px;
     margin: 5px;
 }
-.weight{
+.weightBtn{
     width: 80px;
     height: 30px;
     margin: 5px;
@@ -183,7 +185,7 @@
     margin: 5px;
 }
 .containerBMI{
-    display: inline-flex;
+    display: flex;
 }
 .BMInumberbox{
     height: 80px;
@@ -216,18 +218,14 @@
     padding: 3px;
     padding-right: 165px;
     }
-
 .containerBMI{
-    margin-left: 500px
+    margin-left: 600px
 }
 .tablep{
     display: flex;
 }
 .ImageRight{
-    margin-left: 20px;
-    width: 550px;
-    height: auto;
-    margin-top: 100px;
+    margin-left: 30px;
 }
 .CaloriesP{
     text-align: center;
@@ -235,5 +233,13 @@
     font-weight: 700;
 }
 .BMIweight{
+    text-align: center;
+}
+#weightbtn{
+    margin: 5px;
+    text-align: center;
+}
+#genderbtn{
+    margin: 5px;
     text-align: center;
 }

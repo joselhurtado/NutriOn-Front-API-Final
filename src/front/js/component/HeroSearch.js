@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Search from "/src/front/js/component/Search"
 
-
 export const HeroSearch = () => {
 	return (
         <div className="container-flex searchSection">

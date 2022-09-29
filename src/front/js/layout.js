@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "../js/component/scrollToTop.js";
+// import { Context } from "../js/store/appContext";
 
 import { Home } from "../js/pages/Home";
 import { ResetPassword } from "../js/pages/ResetPassword";
@@ -22,7 +22,6 @@ import { SingleRecipeKetoPage } from "./pages/SingleRecipeKetoPage";
 import { PaleoPage } from "../js/pages/PaleoPage";
 import { SingleRecipePaleoPage } from "./pages/SingleRecipePaleoPage";
 
-
 import { WelcomePage } from "../js/pages/WelcomePage";
 import { SignUpPage } from "../js/pages/SignUpPage";
 import { SignUpQuestionsPage } from "../js/pages/SignUpQuestionsPage";
@@ -38,6 +37,8 @@ const Layout = () => {
   //the basename is used when your project is published in a subdirectory and not in the root of the domain
   // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
   const basename = process.env.BASENAME || "";
+  // const [store, actions] = useState(["hello"]);
+  // const value = {store, actions};
 
   //State for Search
   const [query, setQuery] = useState("");
@@ -45,8 +46,8 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <ScrollToTop>
           <NavBar />
+          {/* <Context.Provider value={value}> */}
           <Routes>
             <Route index element={<Home />} path="/" />
             <Route element={<Profile />} path="/dashboard" />
@@ -115,7 +116,7 @@ const Layout = () => {
             <Route element={<h1>404 Not Found!</h1>} />
           </Routes>
           <Footer />
-        </ScrollToTop>
+          {/* </Context.Provider> */}
       </BrowserRouter>
     </div>
   );

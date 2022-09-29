@@ -2,7 +2,6 @@ import React from "react";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 import RecipeCardPopular from "/src/front/js/component/RecipeCardPopular";
-import { ButtonDiets } from "/src/front/js/component/ButtonDiets";
 import { HeroSearch } from "/src/front/js/component/HeroSearch";
 
 export const PopularPage = () => {

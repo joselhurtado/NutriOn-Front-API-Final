@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Hero1 from "/src/front/img/Hero Healthy Food.png";
 
-
 export const Hero = () => {
 	return (
         <div className="heroSection">

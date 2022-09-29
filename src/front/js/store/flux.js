@@ -10,11 +10,13 @@ const getState = ({ getStore, getActions, setStore }) => {
       recipePaleo: [],
       recipeVegetarian: [],
       favorites: [],
+      usersignupstats: [], //SignUp Page Store
+      usersignupstatstwo: [], //SignUp Page Store
     },
     actions: {
       getPopularRecipes: async () => {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${process.env.APIfood}&minCarbs=100&maxCarbs=1000&number=3`
+          `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${process.env.APIfood}&minCarbs=10&maxCarbs=1000&number=3`
         );
         const payload = await response.json();
         setStore({ recipePopular: payload });
@@ -35,7 +37,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           `https://api.spoonacular.com/recipes/complexSearch?query=${text}&apiKey=${process.env.APIfood}&number=3`
         );
         const payload = await response.json();
-        setStore({ recipeResults: payload.recipes });
+        setStore({ recipeResults: payload.results });
         console.log(payload, "::::::::Results from Flux Recipes:::::::::::");
       },
 
@@ -85,6 +87,15 @@ const getState = ({ getStore, getActions, setStore }) => {
         const store = getStore();
         let updatedList = store.favorites.filter((item, i) => index != i);
         setStore({ favorites: updatedList });
+      },
+
+      addsignupData: (userinfo) => { //SignUp Page Store
+      setStore({ usersignupstats: userinfo });
+      console.log(userinfo);
+      },
+
+      addsignupDatatwo: (userinfo) => { //SignUp Page Store
+      setStore({ usersignupstatstwo: userinfo });
       },
 
       // newUser: async () => {

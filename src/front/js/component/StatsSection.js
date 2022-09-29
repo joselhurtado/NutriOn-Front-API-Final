@@ -4,7 +4,6 @@ import trackImage from "/src/front/img/track-improve-image.png";
 import findImage from "/src/front/img/find-recipes-image.png";
 import evaluateImage from "/src/front/img/evalaute-nutrients-image.png";
 
-
 export const StatsSection = () => {
 	return (
         <div className="container statsGrid">

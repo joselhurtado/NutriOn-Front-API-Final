@@ -1,7 +1,6 @@
 import React from "react";
 import "../../styles/home.css";
 import  RecipeDetailsVegetarian from "/src/front/js/component/RecipeDetailsVegetarian";
-import { ButtonDiets } from "/src/front/js/component/ButtonDiets";
 import { BMRSection } from "/src/front/js/component/BMRSection";
 import { HeroSearch } from "/src/front/js/component/HeroSearch";
 
@@ -11,9 +10,6 @@ export const SingleRecipeVegetarianPage = () => {
 			<div>
 				<HeroSearch />
 			</div> 
-			<div>
-				<ButtonDiets />
-			</div>
 			<div>
 				<RecipeDetailsVegetarian />
 			</div>
